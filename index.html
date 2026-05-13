@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Seleção de Fragrâncias</title>
+    <title>Consultoria de Fragrâncias - Boutique</title>
     <style>
         body {
             font-family: 'Segoe UI', Arial, sans-serif;
@@ -14,6 +14,7 @@
             align-items: center;
             min-height: 100vh;
             margin: 0;
+            padding: 20px;
         }
         .container {
             background: white;
@@ -29,6 +30,7 @@
             text-align: center;
             margin-bottom: 30px;
             letter-spacing: 1px;
+            text-transform: uppercase;
         }
         .form-group {
             margin-bottom: 20px;
@@ -57,6 +59,8 @@
             font-size: 1rem;
             cursor: pointer;
             transition: background 0.3s;
+            text-transform: uppercase;
+            letter-spacing: 1px;
         }
         button:hover {
             background-color: #555;
@@ -67,96 +71,93 @@
             border-top: 1px solid #eee;
             display: none;
             line-height: 1.6;
+            background-color: #fff;
+        }
+        .btn-nova-consulta {
+            margin-top: 20px;
+            background-color: #888;
+            padding: 10px;
+            font-size: 0.8rem;
         }
         .loading {
             text-align: center;
             font-size: 0.9rem;
             color: #999;
             display: none;
+            margin-top: 20px;
         }
     </style>
 </head>
 <body>
 
-
 <div class="container">
-    <h1>CONSULTORIA DE FRAGRÂNCIAS</h1>
+    <h1>Consultoria de Fragrâncias</h1>
     
-    <div class="form-group">
-        <label>Cidade</label>
-        <input type="text" id="cidade" placeholder="Ex: Curitiba">
+    <div id="formulario">
+        <div class="form-group">
+            <label>Cidade</label>
+            <input type="text" id="cidade" placeholder="Ex: Rio de Janeiro">
+        </div>
+
+        <div class="form-group">
+            <label>Data de Nascimento</label>
+            <input type="text" id="data_nasc" placeholder="DD/MM/AAAA">
+        </div>
+
+        <div class="form-group">
+            <label>Nota Olfativa Favorita</label>
+            <input type="text" id="nota_fav" placeholder="Ex: Floral, Amadeirado...">
+        </div>
+
+        <div class="form-group">
+            <label>Ocasião</label>
+            <select id="ocasiao">
+                <option value="trabalho">Trabalho</option>
+                <option value="encontro">Encontro</option>
+                <option value="festa">Festa</option>
+                <option value="balada">Balada</option>
+                <option value="dia_a_dia">Dia a dia</option>
+            </select>
+        </div>
+
+        <button id="btnEnviar" onclick="enviarConsulta()">Revelar Seleção</button>
     </div>
 
-
-    <div class="form-group">
-        <label>Data de Nascimento</label>
-        <input type="text" id="data_nasc" placeholder="DD/MM/AAAA">
-    </div>
-
-
-    <div class="form-group">
-        <label>Nota Olfativa Favorita</label>
-        <input type="text" id="nota_fav" placeholder="Ex: Baunilha">
-    </div>
-
-
-    <div class="form-group">
-        <label>Ocasião</label>
-        <select id="ocasiao">
-            <option value="trabalho">Trabalho</option>
-            <option value="encontro">Encontro</option>
-            <option value="festa">Festa</option>
-            <option value="balada">Balada</option>
-            <option value="dia_a_dia">Dia a dia</option>
-        </select>
-    </div>
-
-
-    <button onclick="enviarConsulta()">Revelar Seleção</button>
-
-
-    <div id="loading" class="loading">Processando sua seleção...</div>
+    <div id="loading" class="loading">Buscando as melhores fragrâncias...</div>
+    
     <div id="resultado"></div>
 </div>
 
-
 <script>
     async function enviarConsulta() {
-        const btn = document.querySelector('button');
         const resDiv = document.getElementById('resultado');
         const loadDiv = document.getElementById('loading');
-
+        const formDiv = document.getElementById('formulario');
 
         const dados = {
             cidade: document.getElementById('cidade').value,
             data_nasc: document.getElementById('data_nasc').value,
             nota_fav: document.getElementById('nota_fav').value,
-            ocasiao: document.getElementById('ocasiao').value
+            ocasiao: document.getElementById('ocasiao').value.toLowerCase()
         };
 
-
         if (!dados.cidade || !dados.data_nasc || !dados.nota_fav) {
-            alert("Por favor, preencha todos os campos.");
+            alert("Por favor, preencha todos os campos corretamente.");
             return;
         }
 
-
-        btn.style.display = 'none';
+        formDiv.style.display = 'none';
         loadDiv.style.display = 'block';
         resDiv.style.display = 'none';
 
-
         try {
-            //https://app-perfumes-qf4c.onrender.com
             const response = await fetch('https://app-perfumes-qf4c.onrender.com/selecao', {
                 method: 'POST',
                 headers: { 'Content-Type': 'application/json' },
                 body: JSON.stringify(dados)
             });
 
-
             const r = await response.json();
-
 
             if (r.status === "sucesso") {
                 resDiv.innerHTML = `
@@ -164,18 +165,18 @@
                     <p><strong>Identidade:</strong> ${r.identidade}</p>
                     <p><strong>Recomendação:</strong> ${r.recomendacao}</p>
                     <p><em>${r.dica}</em></p>
+                    <button class="btn-nova-consulta" onclick="window.location.reload()">Fazer Nova Consulta</button>
                 `;
                 resDiv.style.display = 'block';
             }
         } catch (error) {
-            alert("Erro ao conectar com o servidor. Verifique se a API no Render está ativa.");
+            alert("O servidor está processando. Tente novamente em alguns segundos.");
+            formDiv.style.display = 'block';
         } finally {
-            btn.style.display = 'block';
             loadDiv.style.display = 'none';
         }
     }
 </script>
-
 
 </body>
 </html>

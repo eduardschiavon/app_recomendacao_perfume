@@ -30,25 +30,38 @@ def obter_signo(dia, mes):
     return "peixes"
 
 @app.route('/selecao', methods=['POST'])
+from datetime import datetime
+
+@app.route('/selecao', methods=['POST'])
 def gerar_selecao():
     dados = request.json
     cidade = dados.get('cidade', 'nao informada')
     ocasiao = dados.get('ocasiao', 'dia_a_dia').lower()
     data_nasc = dados.get('data_nasc', '')
 
-    # 1. Carregar Dados (Usando o nome exato que está no seu GitHub)
+    # 1. Carregar os Bancos de Dados
     db_signos = carregar_dados('Jjon_signo_perfume.JSON')
     db_ocasiao = carregar_dados('Jjon_ocasiao_perfume.JSON')
+    dataset = carregar_dados('dataset_perfumes.json') # Seu catalogo de 100 itens
 
-    # 2. Descobrir Signo
+    # 2. Calcular Idade e Signo
     try:
-        dia, mes, _ = map(int, data_nasc.split('/'))
-        signo = obter_signo(dia, mes)
+        data_dt = datetime.strptime(data_nasc, "%d/%m/%Y")
+        idade = datetime.now().year - data_dt.year
+        signo = obter_signo(data_dt.day, data_dt.month)
     except:
-        signo = "aries" # fallback
+        idade = 30
+        signo = "aries"
 
-    # 3. Buscar Perfumes Reais
-    # Pega o primeiro perfume da lista do signo ou da ocasiao
+    # 3. Buscar Perfume por Idade (Filtro no Dataset)
+    perfume_idade = "Fragrancia exclusiva para sua idade"
+    if dataset:
+        for p in dataset:
+            if p['Idade_Min'] <= idade <= p['Idade_Max']:
+                perfume_idade = p['Perfume']
+                break
+
+    # 4. Buscar Perfumes de Signo e Ocasiao
     perfume_signo = db_signos.get(signo, ["Fragrancia Astral"])[0] if db_signos else "Fragrancia Astral"
     perfume_ocasiao = db_ocasiao.get(ocasiao, ["Fragrancia Momento"])[0] if db_ocasiao else "Fragrancia Momento"
 
@@ -57,8 +70,10 @@ def gerar_selecao():
         "mensagem": f"Selecao preparada para cliente em {cidade}.",
         "identidade": f"Sua assinatura baseada no signo de {signo.capitalize()} sugere {perfume_signo}.",
         "recomendacao": f"Para {ocasiao}, a nossa escolha principal e o {perfume_ocasiao}.",
+        "idade_perfil": f"Considerando o seu perfil de {idade} anos, o {perfume_idade} e a nossa recomendacao especial.",
         "dica": "Aplique nos pontos de pulsacao para uma melhor performance da fragrancia."
     })
+
 
 if __name__ == '__main__':
     port = int(os.environ.get("PORT", 5000))

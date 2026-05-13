@@ -1,0 +1,1900 @@
+[
+    {
+        "Rank": 1,
+        "Perfume": "Good Girl",
+        "Marca": "C. Herrera",
+        "Familia_Olfativa": "Oriental Floral",
+        "Ingrediente_Assinatura": "Cacau e Fava Tonka",
+        "Preco_Min": 480,
+        "Preco_Max": 720,
+        "Estrelas": 4.8,
+        "Idade_Min": 20,
+        "Idade_Max": 40,
+        "Buscas": [
+            "Floratta Red",
+            "Scandal",
+            "212 VIP",
+            "Egeo Red",
+            "Salto agulha"
+        ]
+    },
+    {
+        "Rank": 2,
+        "Perfume": "Lily EDP",
+        "Marca": "O Boticário",
+        "Familia_Olfativa": "Floral",
+        "Ingrediente_Assinatura": "Lírios (Enfleurage)",
+        "Preco_Min": 260,
+        "Preco_Max": 310,
+        "Estrelas": 4.6,
+        "Idade_Min": 25,
+        "Idade_Max": 55,
+        "Buscas": [
+            "Lily Lumière",
+            "Elysée",
+            "J'adore",
+            "Hidratante Lily",
+            "L'eau de Lily"
+        ]
+    },
+    {
+        "Rank": 3,
+        "Perfume": "La Vie Est Belle",
+        "Marca": "Lancôme",
+        "Familia_Olfativa": "Floral Gourmand",
+        "Ingrediente_Assinatura": "Íris e Pralinê",
+        "Preco_Min": 550,
+        "Preco_Max": 900,
+        "Estrelas": 4.7,
+        "Idade_Min": 25,
+        "Idade_Max": 45,
+        "Buscas": [
+            "Floratta L'Amore",
+            "Idôle",
+            "Kriska Drama",
+            "Doce elegante",
+            "Fixação"
+        ]
+    },
+    {
+        "Rank": 4,
+        "Perfume": "Essencial Exc.",
+        "Marca": "Natura",
+        "Familia_Olfativa": "Floral Intenso",
+        "Ingrediente_Assinatura": "Copaíba e Magnólia",
+        "Preco_Min": 170,
+        "Preco_Max": 220,
+        "Estrelas": 4.7,
+        "Idade_Min": 30,
+        "Idade_Max": 50,
+        "Buscas": [
+            "Essencial Mirra",
+            "Una Artisan",
+            "J'adore",
+            "Perfume festa",
+            "Natura fixação"
+        ]
+    },
+    {
+        "Rank": 5,
+        "Perfume": "Egeo Dolce",
+        "Marca": "O Boticário",
+        "Familia_Olfativa": "Oriental Gourmand",
+        "Ingrediente_Assinatura": "Algodão Doce",
+        "Preco_Min": 120,
+        "Preco_Max": 160,
+        "Estrelas": 4.4,
+        "Idade_Min": 15,
+        "Idade_Max": 25,
+        "Buscas": [
+            "Pink Sugar",
+            "Egeo Vanilla",
+            "Cheiro de bala",
+            "Cuide-se Bem",
+            "Fantasy"
+        ]
+    },
+    {
+        "Rank": 6,
+        "Perfume": "Libre",
+        "Marca": "YSL",
+        "Familia_Olfativa": "Fougère Floral",
+        "Ingrediente_Assinatura": "Lavanda e Neroli",
+        "Preco_Min": 500,
+        "Preco_Max": 850,
+        "Estrelas": 4.9,
+        "Idade_Min": 25,
+        "Idade_Max": 45,
+        "Buscas": [
+            "Libre Intense",
+            "Golden Gardênia",
+            "Coffee Duo",
+            "Executiva",
+            "Lavanda"
+        ]
+    },
+    {
+        "Rank": 7,
+        "Perfume": "Floratta Red",
+        "Marca": "O Boticário",
+        "Familia_Olfativa": "Floral Frutal",
+        "Ingrediente_Assinatura": "Maçã de Vermont",
+        "Preco_Min": 130,
+        "Preco_Max": 160,
+        "Estrelas": 4.5,
+        "Idade_Min": 18,
+        "Idade_Max": 35,
+        "Buscas": [
+            "Good Girl",
+            "Floratta Blue",
+            "Sedutor barato",
+            "Boticário kit",
+            "Maçã"
+        ]
+    },
+    {
+        "Rank": 8,
+        "Perfume": "212 VIP Rosé",
+        "Marca": "C. Herrera",
+        "Familia_Olfativa": "Floral Frutal",
+        "Ingrediente_Assinatura": "Champanhe Rosé",
+        "Preco_Min": 450,
+        "Preco_Max": 680,
+        "Estrelas": 4.6,
+        "Idade_Min": 20,
+        "Idade_Max": 35,
+        "Buscas": [
+            "212 Sexy",
+            "VIP Black",
+            "Balada",
+            "Rosé Boticário",
+            "Kit Carolina Herrera"
+        ]
+    },
+    {
+        "Rank": 9,
+        "Perfume": "J'adore",
+        "Marca": "Dior",
+        "Familia_Olfativa": "Floral Branco",
+        "Ingrediente_Assinatura": "Jasmim e Ylang",
+        "Preco_Min": 600,
+        "Preco_Max": 950,
+        "Estrelas": 4.7,
+        "Idade_Min": 35,
+        "Idade_Max": 60,
+        "Buscas": [
+            "Lily",
+            "Gabrielle Chanel",
+            "Dourado",
+            "Dior Brasil",
+            "Florais brancos"
+        ]
+    },
+    {
+        "Rank": 10,
+        "Perfume": "Ilía Secreto",
+        "Marca": "Natura",
+        "Familia_Olfativa": "Floral Ambarado",
+        "Ingrediente_Assinatura": "Ishpink e Uva",
+        "Preco_Min": 0,
+        "Preco_Max": 0,
+        "Estrelas": 4.8,
+        "Idade_Min": 25,
+        "Idade_Max": 45,
+        "Buscas": [
+            "L'Interdit",
+            "Ilía Viver",
+            "Cheiro de uva",
+            "Promoção Natura",
+            "Inverno"
+        ]
+    },
+    {
+        "Rank": 11,
+        "Perfume": "Elysée",
+        "Marca": "O Boticário",
+        "Familia_Olfativa": "Chypre Floral",
+        "Ingrediente_Assinatura": "Orquídea Negra",
+        "Preco_Min": 280,
+        "Preco_Max": 340,
+        "Estrelas": 4.5,
+        "Idade_Min": 30,
+        "Idade_Max": 55,
+        "Buscas": [
+            "Elysée Blanc",
+            "Una Artisan",
+            "Chipre",
+            "Boticário luxo",
+            "Frasco jóia"
+        ]
+    },
+    {
+        "Rank": 12,
+        "Perfume": "Idôle",
+        "Marca": "Lancôme",
+        "Familia_Olfativa": "Chipre Floral",
+        "Ingrediente_Assinatura": "Rosas e Musk",
+        "Preco_Min": 400,
+        "Preco_Max": 700,
+        "Estrelas": 4.6,
+        "Idade_Min": 20,
+        "Idade_Max": 40,
+        "Buscas": [
+            "Idôle Intense",
+            "Biografia Caminho",
+            "Limpo",
+            "Rosas modernas",
+            "Fino"
+        ]
+    },
+    {
+        "Rank": 13,
+        "Perfume": "Coffee Seduc.",
+        "Marca": "O Boticário",
+        "Familia_Olfativa": "Floriental Frutal",
+        "Ingrediente_Assinatura": "Chocolate Branco",
+        "Preco_Min": 150,
+        "Preco_Max": 190,
+        "Estrelas": 4.5,
+        "Idade_Min": 18,
+        "Idade_Max": 35,
+        "Buscas": [
+            "Fantasy",
+            "Coffee Duo",
+            "Gourmand",
+            "Boticário Coffee preço",
+            "Café"
+        ]
+    },
+    {
+        "Rank": 14,
+        "Perfume": "Luna Absoluta",
+        "Marca": "Natura",
+        "Familia_Olfativa": "Chipre Floral",
+        "Ingrediente_Assinatura": "Frutas Roxas",
+        "Preco_Min": 150,
+        "Preco_Max": 190,
+        "Estrelas": 4.7,
+        "Idade_Min": 25,
+        "Idade_Max": 45,
+        "Buscas": [
+            "Luna Radiante",
+            "La Nuit Trésor",
+            "Sensual noite",
+            "Luna kit",
+            "Orquídea"
+        ]
+    },
+    {
+        "Rank": 15,
+        "Perfume": "Scandal",
+        "Marca": "J. P. Gaultier",
+        "Familia_Olfativa": "Floral Mel",
+        "Ingrediente_Assinatura": "Mel e Patchouli",
+        "Preco_Min": 500,
+        "Preco_Max": 800,
+        "Estrelas": 4.8,
+        "Idade_Min": 20,
+        "Idade_Max": 40,
+        "Buscas": [
+            "Scandal By Night",
+            "Ilía Secreto",
+            "Mel",
+            "JPG Brasil",
+            "Pernas para cima"
+        ]
+    },
+    {
+        "Rank": 16,
+        "Perfume": "Egeo Vanilla",
+        "Marca": "O Boticário",
+        "Familia_Olfativa": "Oriental",
+        "Ingrediente_Assinatura": "Baunilha Salgada",
+        "Preco_Min": 130,
+        "Preco_Max": 170,
+        "Estrelas": 4.6,
+        "Idade_Min": 18,
+        "Idade_Max": 30,
+        "Buscas": [
+            "Olympea",
+            "Vanilla Lace",
+            "Baunilha",
+            "Egeo Hit",
+            "Sorvete"
+        ]
+    },
+    {
+        "Rank": 17,
+        "Perfume": "L'Interdit",
+        "Marca": "Givenchy",
+        "Familia_Olfativa": "Floral Amadeirado",
+        "Ingrediente_Assinatura": "Tuberosa e Gergelim",
+        "Preco_Min": 480,
+        "Preco_Max": 750,
+        "Estrelas": 4.9,
+        "Idade_Min": 25,
+        "Idade_Max": 50,
+        "Buscas": [
+            "My Way",
+            "Ilía Secreto",
+            "Chiclete",
+            "Givenchy preço",
+            "Tuberosa"
+        ]
+    },
+    {
+        "Rank": 18,
+        "Perfume": "Biografia Cam.",
+        "Marca": "Natura",
+        "Familia_Olfativa": "Floral Fresco",
+        "Ingrediente_Assinatura": "Magnólia e Pera",
+        "Preco_Min": 140,
+        "Preco_Max": 180,
+        "Estrelas": 4.4,
+        "Idade_Min": 30,
+        "Idade_Max": 50,
+        "Buscas": [
+            "Idôle",
+            "Biografia Assinatura",
+            "Fresco dia",
+            "Natura floral",
+            "Pera"
+        ]
+    },
+    {
+        "Rank": 19,
+        "Perfume": "Euphoria",
+        "Marca": "C. Klein",
+        "Familia_Olfativa": "Floral Frutal",
+        "Ingrediente_Assinatura": "Romã e Orquídea",
+        "Preco_Min": 300,
+        "Preco_Max": 500,
+        "Estrelas": 4.5,
+        "Idade_Min": 25,
+        "Idade_Max": 45,
+        "Buscas": [
+            "Luna Absoluta",
+            "Calvin Klein",
+            "Amadeirado",
+            "Sensual barato",
+            "Orquídea"
+        ]
+    },
+    {
+        "Rank": 20,
+        "Perfume": "Fantasy",
+        "Marca": "B. Spears",
+        "Familia_Olfativa": "Gourmand Doce",
+        "Ingrediente_Assinatura": "Cupcake e Kiwi",
+        "Preco_Min": 180,
+        "Preco_Max": 280,
+        "Estrelas": 4.2,
+        "Idade_Min": 15,
+        "Idade_Max": 35,
+        "Buscas": [
+            "Coffee Seduc",
+            "Egeo Dolce",
+            "Britney",
+            "Doce adolescente",
+            "Nostalgia"
+        ]
+    },
+    {
+        "Rank": 21,
+        "Perfume": "Liz",
+        "Marca": "O Boticário",
+        "Familia_Olfativa": "Amadeirado Floral",
+        "Ingrediente_Assinatura": "Base de Laire Iris Noble",
+        "Preco_Min": 140,
+        "Preco_Max": 180,
+        "Estrelas": 4.7,
+        "Idade_Min": 25,
+        "Idade_Max": 45,
+        "Buscas": [
+            "Baccarat Rouge",
+            "Liz Flora",
+            "Perfume amadeirado",
+            "Fixação Liz",
+            "Hidratante Liz"
+        ]
+    },
+    {
+        "Rank": 22,
+        "Perfume": "Light Blue",
+        "Marca": "D&G",
+        "Familia_Olfativa": "Cítrico Floral",
+        "Ingrediente_Assinatura": "Limão Siciliano e Cedro",
+        "Preco_Min": 420,
+        "Preco_Max": 680,
+        "Estrelas": 4.8,
+        "Idade_Min": 20,
+        "Idade_Max": 60,
+        "Buscas": [
+            "Floratta Blue",
+            "Limão e maçã",
+            "Perfume verão",
+            "Cítrico fresco",
+            "D&G Brasil"
+        ]
+    },
+    {
+        "Rank": 23,
+        "Perfume": "Coco Madem.",
+        "Marca": "Chanel",
+        "Familia_Olfativa": "Chypre Floral",
+        "Ingrediente_Assinatura": "Patchouli e Laranja",
+        "Preco_Min": 850,
+        "Preco_Max": 1300,
+        "Estrelas": 4.9,
+        "Idade_Min": 25,
+        "Idade_Max": 60,
+        "Buscas": [
+            "Elysée",
+            "Miss Dior",
+            "Chanel No 5",
+            "Perfume de rica",
+            "Chanel Intense"
+        ]
+    },
+    {
+        "Rank": 24,
+        "Perfume": "Make B. Gold",
+        "Marca": "O Boticário",
+        "Familia_Olfativa": "Floriental Ambarado",
+        "Ingrediente_Assinatura": "Sândalo e Framboesa",
+        "Preco_Min": 210,
+        "Preco_Max": 260,
+        "Estrelas": 4.6,
+        "Idade_Min": 28,
+        "Idade_Max": 48,
+        "Buscas": [
+            "Make B. Rosé",
+            "Perfume latinha",
+            "Boticário Gold",
+            "Floral forte",
+            "Sândalo"
+        ]
+    },
+    {
+        "Rank": 25,
+        "Perfume": "Revelar",
+        "Marca": "Natura",
+        "Familia_Olfativa": "Adocicado Oriental",
+        "Ingrediente_Assinatura": "Sândalo e Baunilha",
+        "Preco_Min": 150,
+        "Preco_Max": 190,
+        "Estrelas": 4.5,
+        "Idade_Min": 35,
+        "Idade_Max": 65,
+        "Buscas": [
+            "Revelar Noite",
+            "Clássicos Natura",
+            "Perfume vintage",
+            "Sândalo",
+            "Natura Promoção"
+        ]
+    },
+    {
+        "Rank": 26,
+        "Perfume": "Hypnotic P.",
+        "Marca": "Dior",
+        "Familia_Olfativa": "Oriental Baunilha",
+        "Ingrediente_Assinatura": "Amêndoa Amarga",
+        "Preco_Min": 520,
+        "Preco_Max": 850,
+        "Estrelas": 4.8,
+        "Idade_Min": 25,
+        "Idade_Max": 45,
+        "Buscas": [
+            "Baunilha e coco",
+            "Perfume incenso",
+            "Dior Poison",
+            "Noturno forte",
+            "Amêndoas"
+        ]
+    },
+    {
+        "Rank": 27,
+        "Perfume": "Kriska Drama",
+        "Marca": "Natura",
+        "Familia_Olfativa": "Adocicado Moderado",
+        "Ingrediente_Assinatura": "Caramelo e Nozes",
+        "Preco_Min": 110,
+        "Preco_Max": 145,
+        "Estrelas": 4.6,
+        "Idade_Min": 18,
+        "Idade_Max": 35,
+        "Buscas": [
+            "Kriska Shock",
+            "Perfume de inverno",
+            "Natura doce",
+            "Caramelo",
+            "Kriska Mania"
+        ]
+    },
+    {
+        "Rank": 28,
+        "Perfume": "Botica 214 G.",
+        "Marca": "O Boticário",
+        "Familia_Olfativa": "Floral Ambarada",
+        "Ingrediente_Assinatura": "Gardênia e Mandarina",
+        "Preco_Min": 230,
+        "Preco_Max": 270,
+        "Estrelas": 4.4,
+        "Idade_Min": 25,
+        "Idade_Max": 50,
+        "Buscas": [
+            "Golden Gardênia",
+            "Botica 214 preço",
+            "Perfume solar",
+            "Gardênia",
+            "Floral branco"
+        ]
+    },
+    {
+        "Rank": 29,
+        "Perfume": "Prada Parad.",
+        "Marca": "Prada",
+        "Familia_Olfativa": "Floral Ambarado",
+        "Ingrediente_Assinatura": "Neroli e Âmbar",
+        "Preco_Min": 600,
+        "Preco_Max": 950,
+        "Estrelas": 4.7,
+        "Idade_Min": 20,
+        "Idade_Max": 45,
+        "Buscas": [
+            "Prada Candy",
+            "Perfume recarregável",
+            "Neroli",
+            "Paradoxe Intense",
+            "Perfume triângulo"
+        ]
+    },
+    {
+        "Rank": 30,
+        "Perfume": "Meow",
+        "Marca": "Katy Perry",
+        "Familia_Olfativa": "Floral Frutal",
+        "Ingrediente_Assinatura": "Pera e Gardênia",
+        "Preco_Min": 220,
+        "Preco_Max": 380,
+        "Estrelas": 4.3,
+        "Idade_Min": 15,
+        "Idade_Max": 25,
+        "Buscas": [
+            "Purr Katy Perry",
+            "Perfume de gato",
+            "Pera doce",
+            "Perfume teen",
+            "Katy Perry Brasil"
+        ]
+    },
+    {
+        "Rank": 31,
+        "Perfume": "Glamour Sec.",
+        "Marca": "O Boticário",
+        "Familia_Olfativa": "Oriental Floral",
+        "Ingrediente_Assinatura": "Figo e Framboesa",
+        "Preco_Min": 170,
+        "Preco_Max": 210,
+        "Estrelas": 4.5,
+        "Idade_Min": 20,
+        "Idade_Max": 40,
+        "Buscas": [
+            "Glamour Black",
+            "Boticário Secrets",
+            "Perfume sedutor",
+            "Figo",
+            "Glamour preço"
+        ]
+    },
+    {
+        "Rank": 32,
+        "Perfume": "Amor Amor",
+        "Marca": "Cacharel",
+        "Familia_Olfativa": "Floral Frutal",
+        "Ingrediente_Assinatura": "Groselha e Baunilha",
+        "Preco_Min": 260,
+        "Preco_Max": 480,
+        "Estrelas": 4.4,
+        "Idade_Min": 18,
+        "Idade_Max": 35,
+        "Buscas": [
+            "Primeiro importado",
+            "Perfume vermelho",
+            "Cacharel Brasil",
+            "Groselha",
+            "Doce frutal"
+        ]
+    },
+    {
+        "Rank": 33,
+        "Perfume": "Chloé EDP",
+        "Marca": "Chloé",
+        "Familia_Olfativa": "Floral Rosa",
+        "Ingrediente_Assinatura": "Rosa Damascena e Peônia",
+        "Preco_Min": 580,
+        "Preco_Max": 890,
+        "Estrelas": 4.8,
+        "Idade_Min": 25,
+        "Idade_Max": 50,
+        "Buscas": [
+            "Cheiro de amaciante",
+            "Rosa pura",
+            "Chloé Nomade",
+            "Elegante",
+            "Perfume de banho"
+        ]
+    },
+    {
+        "Rank": 34,
+        "Perfume": "Ekos Moça",
+        "Marca": "Natura",
+        "Familia_Olfativa": "Floral Fresco",
+        "Ingrediente_Assinatura": "Pitanga e Musk",
+        "Preco_Min": 100,
+        "Preco_Max": 145,
+        "Estrelas": 4.7,
+        "Idade_Min": 15,
+        "Idade_Max": 65,
+        "Buscas": [
+            "Frescor Moça",
+            "Natura Ekos kit",
+            "Banho tomado",
+            "Pitanga",
+            "Perfume suave"
+        ]
+    },
+    {
+        "Rank": 35,
+        "Perfume": "Black Opium",
+        "Marca": "YSL",
+        "Familia_Olfativa": "Oriental Especiado",
+        "Ingrediente_Assinatura": "Café e Baunilha",
+        "Preco_Min": 530,
+        "Preco_Max": 880,
+        "Estrelas": 4.8,
+        "Idade_Min": 20,
+        "Idade_Max": 40,
+        "Buscas": [
+            "Perfume de café",
+            "YSL Brasil",
+            "Noturno sexy",
+            "Baunilha escura",
+            "Rock n roll"
+        ]
+    },
+    {
+        "Rank": 36,
+        "Perfume": "Accordes",
+        "Marca": "O Boticário",
+        "Familia_Olfativa": "Floral Aldeídico",
+        "Ingrediente_Assinatura": "Aldeídos e Flores Brancas",
+        "Preco_Min": 185,
+        "Preco_Max": 230,
+        "Estrelas": 4.4,
+        "Idade_Min": 40,
+        "Idade_Max": 75,
+        "Buscas": [
+            "Accordes Lumiere",
+            "Perfume atalcado",
+            "Clássicos Boticário",
+            "Jasmim",
+            "Elegante"
+        ]
+    },
+    {
+        "Rank": 37,
+        "Perfume": "Una Blush",
+        "Marca": "Natura",
+        "Familia_Olfativa": "Floral Intenso",
+        "Ingrediente_Assinatura": "Breu Branco e Flores",
+        "Preco_Min": 245,
+        "Preco_Max": 290,
+        "Estrelas": 4.7,
+        "Idade_Min": 25,
+        "Idade_Max": 50,
+        "Buscas": [
+            "Una Artisan",
+            "Perfume Una rosa",
+            "Flores intensas",
+            "Natura luxo",
+            "Maquiagem Una"
+        ]
+    },
+    {
+        "Rank": 38,
+        "Perfume": "Classique",
+        "Marca": "J. P. Gaultier",
+        "Familia_Olfativa": "Oriental Floral",
+        "Ingrediente_Assinatura": "Flor de Laranjeira",
+        "Preco_Min": 460,
+        "Preco_Max": 780,
+        "Estrelas": 4.6,
+        "Idade_Min": 35,
+        "Idade_Max": 65,
+        "Buscas": [
+            "JPG busto",
+            "Perfume vintage",
+            "Flor de laranjeira",
+            "Sensual clássico",
+            "Classique EDP"
+        ]
+    },
+    {
+        "Rank": 39,
+        "Perfume": "Floratta Blue",
+        "Marca": "O Boticário",
+        "Familia_Olfativa": "Floral Musk",
+        "Ingrediente_Assinatura": "Musk e Sândalo",
+        "Preco_Min": 125,
+        "Preco_Max": 155,
+        "Estrelas": 4.5,
+        "Idade_Min": 15,
+        "Idade_Max": 60,
+        "Buscas": [
+            "CK Be",
+            "Floratta original",
+            "Perfume azul",
+            "Musk suave",
+            "Boticário frescor"
+        ]
+    },
+    {
+        "Rank": 40,
+        "Perfume": "Pure XS Her",
+        "Marca": "P. Rabanne",
+        "Familia_Olfativa": "Oriental Floral",
+        "Ingrediente_Assinatura": "Pipoca e Baunilha",
+        "Preco_Min": 490,
+        "Preco_Max": 790,
+        "Estrelas": 4.7,
+        "Idade_Min": 18,
+        "Idade_Max": 35,
+        "Buscas": [
+            "Perfume de pipoca",
+            "Olympea",
+            "Rabanne feminino",
+            "Cobra no frasco",
+            "Salgado doce"
+        ]
+    },
+    {
+        "Rank": 41,
+        "Perfume": "Humor Próprio",
+        "Marca": "Natura",
+        "Familia_Olfativa": "Floral Frutal",
+        "Ingrediente_Assinatura": "Cereja em Calda",
+        "Preco_Min": 120,
+        "Preco_Max": 155,
+        "Estrelas": 4.6,
+        "Idade_Min": 15,
+        "Idade_Max": 30,
+        "Buscas": [
+            "Humor 1",
+            "Perfume cereja",
+            "Natura jovem",
+            "Colorido",
+            "Doce frutal"
+        ]
+    },
+    {
+        "Rank": 42,
+        "Perfume": "My Way",
+        "Marca": "G. Armani",
+        "Familia_Olfativa": "Floral Branco",
+        "Ingrediente_Assinatura": "Tuberosa e Baunilha",
+        "Preco_Min": 450,
+        "Preco_Max": 820,
+        "Estrelas": 4.7,
+        "Idade_Min": 20,
+        "Idade_Max": 45,
+        "Buscas": [
+            "L'Interdit",
+            "Tuberosa",
+            "Perfume recarregável",
+            "Armani Brasil",
+            "Floral marcante"
+        ]
+    },
+    {
+        "Rank": 43,
+        "Perfume": "Cherry Blast",
+        "Marca": "O Boticário",
+        "Familia_Olfativa": "Oriental Frutal",
+        "Ingrediente_Assinatura": "Cereja e Chocolate",
+        "Preco_Min": 135,
+        "Preco_Max": 175,
+        "Estrelas": 4.4,
+        "Idade_Min": 15,
+        "Idade_Max": 28,
+        "Buscas": [
+            "Egeo Hit",
+            "Cheiro de calda",
+            "Perfume de balada",
+            "Boticário Egeo",
+            "Cereja forte"
+        ]
+    },
+    {
+        "Rank": 44,
+        "Perfume": "Olympea",
+        "Marca": "P. Rabanne",
+        "Familia_Olfativa": "Âmbar Floral",
+        "Ingrediente_Assinatura": "Baunilha Salgada",
+        "Preco_Min": 460,
+        "Preco_Max": 760,
+        "Estrelas": 4.7,
+        "Idade_Min": 20,
+        "Idade_Max": 40,
+        "Buscas": [
+            "Pure XS",
+            "Sal e baunilha",
+            "Perfume de sereia",
+            "Paco Rabanne",
+            "Fixação forte"
+        ]
+    },
+    {
+        "Rank": 45,
+        "Perfume": "Free Hugs",
+        "Marca": "O Boticário",
+        "Familia_Olfativa": "Floral Aldeídico",
+        "Ingrediente_Assinatura": "Notas de Algodão",
+        "Preco_Min": 125,
+        "Preco_Max": 165,
+        "Estrelas": 4.5,
+        "Idade_Min": 18,
+        "Idade_Max": 45,
+        "Buscas": [
+            "Cheiro de abraço",
+            "Conforto",
+            "Perfume para dormir",
+            "Boticário suave",
+            "Limpo"
+        ]
+    },
+    {
+        "Rank": 46,
+        "Perfume": "F. Away Beyond",
+        "Marca": "Avon",
+        "Familia_Olfativa": "Oriental Baunilha",
+        "Ingrediente_Assinatura": "Baunilha de Madagascar",
+        "Preco_Min": 95,
+        "Preco_Max": 135,
+        "Estrelas": 4.6,
+        "Idade_Min": 30,
+        "Idade_Max": 60,
+        "Buscas": [
+            "Far Away Gold",
+            "Avon luxo",
+            "Baunilha escura",
+            "Perfume que gruda",
+            "Noite"
+        ]
+    },
+    {
+        "Rank": 47,
+        "Perfume": "Very Good Girl",
+        "Marca": "C. Herrera",
+        "Familia_Olfativa": "Floral Frutal",
+        "Ingrediente_Assinatura": "Groselha e Lichia",
+        "Preco_Min": 510,
+        "Preco_Max": 860,
+        "Estrelas": 4.8,
+        "Idade_Min": 20,
+        "Idade_Max": 40,
+        "Buscas": [
+            "Good Girl Vermelho",
+            "Delina dupe",
+            "Perfume azedinho",
+            "Lichia",
+            "Salto alto"
+        ]
+    },
+    {
+        "Rank": 48,
+        "Perfume": "Cecita Blossom",
+        "Marca": "O Boticário",
+        "Familia_Olfativa": "Floral",
+        "Ingrediente_Assinatura": "Narciso e Jasmim",
+        "Preco_Min": 135,
+        "Preco_Max": 175,
+        "Estrelas": 4.4,
+        "Idade_Min": 25,
+        "Idade_Max": 55,
+        "Buscas": [
+            "Cecita clássico",
+            "Floral suave",
+            "Boticário vintage",
+            "Primavera",
+            "Delicado"
+        ]
+    },
+    {
+        "Rank": 49,
+        "Perfume": "Her Code",
+        "Marca": "O Boticário",
+        "Familia_Olfativa": "Amadeirado Floral",
+        "Ingrediente_Assinatura": "Cereja Preta e Sândalo",
+        "Preco_Min": 185,
+        "Preco_Max": 235,
+        "Estrelas": 4.6,
+        "Idade_Min": 22,
+        "Idade_Max": 42,
+        "Buscas": [
+            "Perfume cadeado",
+            "Sensual moderno",
+            "Boticário lançamento",
+            "Amadeirado",
+            "Noite"
+        ]
+    },
+    {
+        "Rank": 50,
+        "Perfume": "L'eau de Lily",
+        "Marca": "O Boticário",
+        "Familia_Olfativa": "Floral Frutal",
+        "Ingrediente_Assinatura": "Lírio e Damasco",
+        "Preco_Min": 165,
+        "Preco_Max": 205,
+        "Estrelas": 4.5,
+        "Idade_Min": 20,
+        "Idade_Max": 60,
+        "Buscas": [
+            "Lily transparente",
+            "Floral leve",
+            "Dia a dia",
+            "Lily Boticário",
+            "Frescor"
+        ]
+    },
+    {
+        "Rank": 51,
+        "Perfume": "Prada Candy",
+        "Marca": "Prada",
+        "Familia_Olfativa": "Oriental Gourmand",
+        "Ingrediente_Assinatura": "Caramelo e Almíscar",
+        "Preco_Min": 510,
+        "Preco_Max": 860,
+        "Estrelas": 4.4,
+        "Idade_Min": 18,
+        "Idade_Max": 35,
+        "Buscas": [
+            "Perfume doce caro",
+            "Caramelo puro",
+            "Prada Brasil",
+            "Gourmand luxo",
+            "Candy Gloss"
+        ]
+    },
+    {
+        "Rank": 52,
+        "Perfume": "Floratta Rose",
+        "Marca": "O Boticário",
+        "Familia_Olfativa": "Floral",
+        "Ingrediente_Assinatura": "Rosa e Pimenta Rosa",
+        "Preco_Min": 135,
+        "Preco_Max": 165,
+        "Estrelas": 4.6,
+        "Idade_Min": 15,
+        "Idade_Max": 45,
+        "Buscas": [
+            "Floratta Blue",
+            "Rosa delicada",
+            "Perfume romântico",
+            "Boticário rosa",
+            "Dia"
+        ]
+    },
+    {
+        "Rank": 53,
+        "Perfume": "Una Artisan",
+        "Marca": "Natura",
+        "Familia_Olfativa": "Chypre Floral",
+        "Ingrediente_Assinatura": "Patchouli e Baunilha",
+        "Preco_Min": 245,
+        "Preco_Max": 285,
+        "Estrelas": 4.8,
+        "Idade_Min": 30,
+        "Idade_Max": 55,
+        "Buscas": [
+            "Una Blush",
+            "Chipre nacional",
+            "Perfume elegante",
+            "Natura luxo",
+            "Fixação alta"
+        ]
+    },
+    {
+        "Rank": 54,
+        "Perfume": "Alien",
+        "Marca": "Mugler",
+        "Familia_Olfativa": "Âmbar Amadeirado",
+        "Ingrediente_Assinatura": "Jasmim Sambac",
+        "Preco_Min": 610,
+        "Preco_Max": 960,
+        "Estrelas": 4.7,
+        "Idade_Min": 25,
+        "Idade_Max": 50,
+        "Buscas": [
+            "Perfume roxo",
+            "Jasmim forte",
+            "Mugler Brasil",
+            "Perfume místico",
+            "Fixação eterna"
+        ]
+    },
+    {
+        "Rank": 55,
+        "Perfume": "212 Sexy",
+        "Marca": "C. Herrera",
+        "Familia_Olfativa": "Oriental Floral",
+        "Ingrediente_Assinatura": "Pimenta Rosa e Algodão",
+        "Preco_Min": 460,
+        "Preco_Max": 690,
+        "Estrelas": 4.5,
+        "Idade_Min": 20,
+        "Idade_Max": 40,
+        "Buscas": [
+            "212 VIP",
+            "Perfume de balada",
+            "Sedutor",
+            "Carolina Herrera",
+            "Pimenta rosa"
+        ]
+    },
+    {
+        "Rank": 56,
+        "Perfume": "Coffee W. Duo",
+        "Marca": "O Boticário",
+        "Familia_Olfativa": "Amadeirado Floral",
+        "Ingrediente_Assinatura": "Café Latte e Lavanda",
+        "Preco_Min": 165,
+        "Preco_Max": 205,
+        "Estrelas": 4.7,
+        "Idade_Min": 20,
+        "Idade_Max": 45,
+        "Buscas": [
+            "Libre dupe",
+            "Café com leite",
+            "Coffee Boticário",
+            "Perfume cremoso",
+            "Lavanda"
+        ]
+    },
+    {
+        "Rank": 57,
+        "Perfume": "Luna Coragem",
+        "Marca": "Natura",
+        "Familia_Olfativa": "Chypre Floral",
+        "Ingrediente_Assinatura": "Protea e Pimenta Rosa",
+        "Preco_Min": 155,
+        "Preco_Max": 195,
+        "Estrelas": 4.6,
+        "Idade_Min": 25,
+        "Idade_Max": 45,
+        "Buscas": [
+            "Luna Radiante",
+            "Lançamento Natura",
+            "Chipre moderno",
+            "Perfume forte",
+            "Luna"
+        ]
+    },
+    {
+        "Rank": 58,
+        "Perfume": "Libre Intense",
+        "Marca": "YSL",
+        "Familia_Olfativa": "Fougère Oriental",
+        "Ingrediente_Assinatura": "Orquídea e Baunilha",
+        "Preco_Min": 560,
+        "Preco_Max": 910,
+        "Estrelas": 4.9,
+        "Idade_Min": 25,
+        "Idade_Max": 50,
+        "Buscas": [
+            "Libre vs Intense",
+            "Baunilha forte",
+            "Perfume de inverno",
+            "YSL luxo",
+            "Noturno"
+        ]
+    },
+    {
+        "Rank": 59,
+        "Perfume": "Glamour Fever",
+        "Marca": "O Boticário",
+        "Familia_Olfativa": "Floral Frutal",
+        "Ingrediente_Assinatura": "Orquídea e Canela",
+        "Preco_Min": 165,
+        "Preco_Max": 215,
+        "Estrelas": 4.5,
+        "Idade_Min": 25,
+        "Idade_Max": 45,
+        "Buscas": [
+            "Perfume oncinha",
+            "Glamour Black",
+            "Canela",
+            "Boticário sensual",
+            "Fever"
+        ]
+    },
+    {
+        "Rank": 60,
+        "Perfume": "Omnia Crystal.",
+        "Marca": "Bvlgari",
+        "Familia_Olfativa": "Floral Aquático",
+        "Ingrediente_Assinatura": "Bambu e Pera",
+        "Preco_Min": 410,
+        "Preco_Max": 710,
+        "Estrelas": 4.7,
+        "Idade_Min": 20,
+        "Idade_Max": 50,
+        "Buscas": [
+            "Perfume refrescante",
+            "Bvlgari Brasil",
+            "Cheiro de banho",
+            "Verão",
+            "Aquático"
+        ]
+    },
+    {
+        "Rank": 61,
+        "Perfume": "Egeo Red",
+        "Marca": "O Boticário",
+        "Familia_Olfativa": "Oriental Floral",
+        "Ingrediente_Assinatura": "Rum e Frutas Vermelhas",
+        "Preco_Min": 135,
+        "Preco_Max": 175,
+        "Estrelas": 4.4,
+        "Idade_Min": 18,
+        "Idade_Max": 35,
+        "Buscas": [
+            "Floratta Red",
+            "Perfume de maçã",
+            "Egeo Boticário",
+            "Sedutor jovem",
+            "Noite"
+        ]
+    },
+    {
+        "Rank": 62,
+        "Perfume": "Ilía Viver",
+        "Marca": "Natura",
+        "Familia_Olfativa": "Floral Frutal",
+        "Ingrediente_Assinatura": "Frutas Vermelhas",
+        "Preco_Min": 165,
+        "Preco_Max": 205,
+        "Estrelas": 4.5,
+        "Idade_Min": 25,
+        "Idade_Max": 50,
+        "Buscas": [
+            "Ilía Secreto",
+            "Floral alegre",
+            "Natura Ilía rosa",
+            "Dia a dia",
+            "Frutado"
+        ]
+    },
+    {
+        "Rank": 63,
+        "Perfume": "S. Beauty",
+        "Marca": "Shakira",
+        "Familia_Olfativa": "Oriental Floral",
+        "Ingrediente_Assinatura": "Framboesa e Baunilha",
+        "Preco_Min": 125,
+        "Preco_Max": 210,
+        "Estrelas": 4.3,
+        "Idade_Min": 15,
+        "Idade_Max": 30,
+        "Buscas": [
+            "Perfume da Shakira",
+            "Barato e bom",
+            "Framboesa",
+            "Doce suave",
+            "Importado"
+        ]
+    },
+    {
+        "Rank": 64,
+        "Perfume": "Miss Dior EDP",
+        "Marca": "Dior",
+        "Familia_Olfativa": "Chypre Floral",
+        "Ingrediente_Assinatura": "Rosa de Grasse e Íris",
+        "Preco_Min": 610,
+        "Preco_Max": 990,
+        "Estrelas": 4.8,
+        "Idade_Min": 20,
+        "Idade_Max": 50,
+        "Buscas": [
+            "Miss Dior Blooming",
+            "Rosa clássica",
+            "Perfume laço",
+            "Dior Brasil",
+            "Elegante"
+        ]
+    },
+    {
+        "Rank": 65,
+        "Perfume": "Elysée Success",
+        "Marca": "O Boticário",
+        "Familia_Olfativa": "Chypre Amadeirado",
+        "Ingrediente_Assinatura": "Rosa Negra e Oud",
+        "Preco_Min": 285,
+        "Preco_Max": 355,
+        "Estrelas": 4.7,
+        "Idade_Min": 30,
+        "Idade_Max": 60,
+        "Buscas": [
+            "Perfume com Oud",
+            "Elysée forte",
+            "Boticário luxo",
+            "Amadeirado",
+            "Noite"
+        ]
+    },
+    {
+        "Rank": 66,
+        "Perfume": "La Nuit Trésor",
+        "Marca": "Lancôme",
+        "Familia_Olfativa": "Oriental Baunilha",
+        "Ingrediente_Assinatura": "Rosa Negra e Baunilha",
+        "Preco_Min": 510,
+        "Preco_Max": 860,
+        "Estrelas": 4.9,
+        "Idade_Min": 25,
+        "Idade_Max": 45,
+        "Buscas": [
+            "Perfume afrodisíaco",
+            "Trésor Lancôme",
+            "Baunilha",
+            "Noite romântica",
+            "Fixação"
+        ]
+    },
+    {
+        "Rank": 67,
+        "Perfume": "Kriska Shock",
+        "Marca": "Natura",
+        "Familia_Olfativa": "Oriental Gourmand",
+        "Ingrediente_Assinatura": "Algodão Doce e Rosa",
+        "Preco_Min": 115,
+        "Preco_Max": 145,
+        "Estrelas": 4.3,
+        "Idade_Min": 12,
+        "Idade_Max": 25,
+        "Buscas": [
+            "Perfume bem doce",
+            "Kriska rosa",
+            "Algodão doce",
+            "Natura infantil",
+            "Barato"
+        ]
+    },
+    {
+        "Rank": 68,
+        "Perfume": "Lady Million",
+        "Marca": "P. Rabanne",
+        "Familia_Olfativa": "Floral Frutal",
+        "Ingrediente_Assinatura": "Mel e Neroli",
+        "Preco_Min": 460,
+        "Preco_Max": 760,
+        "Estrelas": 4.6,
+        "Idade_Min": 20,
+        "Idade_Max": 40,
+        "Buscas": [
+            "Perfume diamante",
+            "Mel e flores",
+            "Paco Rabanne",
+            "Status",
+            "Perfume ouro"
+        ]
+    },
+    {
+        "Rank": 69,
+        "Perfume": "Make B. Rosé",
+        "Marca": "O Boticário",
+        "Familia_Olfativa": "Floral Frutal",
+        "Ingrediente_Assinatura": "Maçã e Damasco",
+        "Preco_Min": 205,
+        "Preco_Max": 255,
+        "Estrelas": 4.5,
+        "Idade_Min": 25,
+        "Idade_Max": 45,
+        "Buscas": [
+            "Make B. Gold",
+            "Perfume latinha",
+            "Floral leve",
+            "Boticário dia",
+            "Maçã"
+        ]
+    },
+    {
+        "Rank": 70,
+        "Perfume": "Bombshell",
+        "Marca": "V. Secret",
+        "Familia_Olfativa": "Floral Frutal",
+        "Ingrediente_Assinatura": "Maracujá e Peônia",
+        "Preco_Min": 360,
+        "Preco_Max": 610,
+        "Estrelas": 4.6,
+        "Idade_Min": 15,
+        "Idade_Max": 35,
+        "Buscas": [
+            "Victoria Secret",
+            "Perfume maracujá",
+            "Verão",
+            "Importado jovem",
+            "Peônia"
+        ]
+    },
+    {
+        "Rank": 71,
+        "Perfume": "Floratta Fleur S.",
+        "Marca": "O Boticário",
+        "Familia_Olfativa": "Floral",
+        "Ingrediente_Assinatura": "Flor de Cerejeira",
+        "Preco_Min": 135,
+        "Preco_Max": 175,
+        "Estrelas": 4.4,
+        "Idade_Min": 15,
+        "Idade_Max": 35,
+        "Buscas": [
+            "Perfume rosa",
+            "Cerejeira",
+            "Floratta Boticário",
+            "Suave",
+            "Feminino dia"
+        ]
+    },
+    {
+        "Rank": 72,
+        "Perfume": "Essencial Ato",
+        "Marca": "Natura",
+        "Familia_Olfativa": "Floral Amadeirado",
+        "Ingrediente_Assinatura": "Priprioca e Flores Solares",
+        "Preco_Min": 225,
+        "Preco_Max": 265,
+        "Estrelas": 4.7,
+        "Idade_Min": 28,
+        "Idade_Max": 55,
+        "Buscas": [
+            "Essencial Natura novo",
+            "Priprioca",
+            "Perfume intenso",
+            "Natura lançamento",
+            "Ato"
+        ]
+    },
+    {
+        "Rank": 73,
+        "Perfume": "Devotion",
+        "Marca": "D&G",
+        "Familia_Olfativa": "Oriental Baunilha",
+        "Ingrediente_Assinatura": "Limão e Panetone",
+        "Preco_Min": 510,
+        "Preco_Max": 860,
+        "Estrelas": 4.8,
+        "Idade_Min": 20,
+        "Idade_Max": 45,
+        "Buscas": [
+            "Perfume doce luxo",
+            "D&G Devotion",
+            "Baunilha cítrica",
+            "Coração sagrado",
+            "Doce"
+        ]
+    },
+    {
+        "Rank": 74,
+        "Perfume": "Botica 214 Verano",
+        "Marca": "O Boticário",
+        "Familia_Olfativa": "Floral Frutal",
+        "Ingrediente_Assinatura": "Notas Verdes e Melão",
+        "Preco_Min": 210,
+        "Preco_Max": 255,
+        "Estrelas": 4.3,
+        "Idade_Min": 20,
+        "Idade_Max": 50,
+        "Buscas": [
+            "Perfume para praia",
+            "Verão Boticário",
+            "Refrescante",
+            "Frutal leve",
+            "Botica 214"
+        ]
+    },
+    {
+        "Rank": 75,
+        "Perfume": "Cloud",
+        "Marca": "Ariana G.",
+        "Familia_Olfativa": "Oriental Gourmet",
+        "Ingrediente_Assinatura": "Lavanda e Marshmallow",
+        "Preco_Min": 360,
+        "Preco_Max": 610,
+        "Estrelas": 4.7,
+        "Idade_Min": 15,
+        "Idade_Max": 30,
+        "Buscas": [
+            "Baccarat Rouge dupe",
+            "Liz",
+            "Ariana Grande Brasil",
+            "Doce nuvem",
+            "Marshmallow"
+        ]
+    },
+    {
+        "Rank": 76,
+        "Perfume": "Luna Radiante",
+        "Marca": "Natura",
+        "Familia_Olfativa": "Chypre Floral",
+        "Ingrediente_Assinatura": "Priprioca e Laranja",
+        "Preco_Min": 155,
+        "Preco_Max": 195,
+        "Estrelas": 4.6,
+        "Idade_Min": 25,
+        "Idade_Max": 55,
+        "Buscas": [
+            "Luna Laranja",
+            "Perfume solar",
+            "Chipre Natura",
+            "Priprioca",
+            "Banho tomado"
+        ]
+    },
+    {
+        "Rank": 77,
+        "Perfume": "Hypnôse",
+        "Marca": "Lancôme",
+        "Familia_Olfativa": "Oriental Baunilha",
+        "Ingrediente_Assinatura": "Flor de Maracujá",
+        "Preco_Min": 460,
+        "Preco_Max": 710,
+        "Estrelas": 4.7,
+        "Idade_Min": 25,
+        "Idade_Max": 55,
+        "Buscas": [
+            "Perfume roxo",
+            "Lancôme clássico",
+            "Maracujá doce",
+            "Noturno elegante",
+            "Fixação"
+        ]
+    },
+    {
+        "Rank": 78,
+        "Perfume": "Egeo Hit",
+        "Marca": "O Boticário",
+        "Familia_Olfativa": "Floral Frutal",
+        "Ingrediente_Assinatura": "Manga e Frutas Amarelas",
+        "Preco_Min": 135,
+        "Preco_Max": 175,
+        "Estrelas": 4.5,
+        "Idade_Min": 15,
+        "Idade_Max": 28,
+        "Buscas": [
+            "Perfume de manga",
+            "Egeo amarelo",
+            "Verão jovem",
+            "Boticário Hit",
+            "Frutal"
+        ]
+    },
+    {
+        "Rank": 79,
+        "Perfume": "Angel",
+        "Marca": "Mugler",
+        "Familia_Olfativa": "Oriental Gourmet",
+        "Ingrediente_Assinatura": "Patchouli e Chocolate",
+        "Preco_Min": 610,
+        "Preco_Max": 1100,
+        "Estrelas": 4.2,
+        "Idade_Min": 30,
+        "Idade_Max": 65,
+        "Buscas": [
+            "Estrela azul",
+            "Perfume forte",
+            "Mugler Angel",
+            "Chocolate amargo",
+            "Clássico"
+        ]
+    },
+    {
+        "Rank": 80,
+        "Perfume": "Biografia Assin.",
+        "Marca": "Natura",
+        "Familia_Olfativa": "Floral",
+        "Ingrediente_Assinatura": "Gerânio e Musk",
+        "Preco_Min": 145,
+        "Preco_Max": 185,
+        "Estrelas": 4.6,
+        "Idade_Min": 30,
+        "Idade_Max": 55,
+        "Buscas": [
+            "Biografia rosa",
+            "Floral limpo",
+            "Perfume assinatura",
+            "Natura Biografia",
+            "Musk"
+        ]
+    },
+    {
+        "Rank": 81,
+        "Perfume": "Liz Flora",
+        "Marca": "O Boticário",
+        "Familia_Olfativa": "Amadeirado Floral",
+        "Ingrediente_Assinatura": "Flor de Laranjeira",
+        "Preco_Min": 155,
+        "Preco_Max": 195,
+        "Estrelas": 4.7,
+        "Idade_Min": 25,
+        "Idade_Max": 50,
+        "Buscas": [
+            "Liz original vs Flora",
+            "Amadeirado leve",
+            "Boticário Liz",
+            "Floral branco",
+            "Dia"
+        ]
+    },
+    {
+        "Rank": 82,
+        "Perfume": "Black Orchid",
+        "Marca": "Tom Ford",
+        "Familia_Olfativa": "Oriental Amadeirado",
+        "Ingrediente_Assinatura": "Trufa Negra e Orquídea",
+        "Preco_Min": 1200,
+        "Preco_Max": 1850,
+        "Estrelas": 4.8,
+        "Idade_Min": 30,
+        "Idade_Max": 60,
+        "Buscas": [
+            "Perfume de nicho",
+            "Tom Ford Brasil",
+            "Luxo extremo",
+            "Orquídea negra",
+            "Unissex"
+        ]
+    },
+    {
+        "Rank": 83,
+        "Perfume": "Be Delicious",
+        "Marca": "DKNY",
+        "Familia_Olfativa": "Floral Frutal",
+        "Ingrediente_Assinatura": "Maçã Verde e Pepino",
+        "Preco_Min": 310,
+        "Preco_Max": 510,
+        "Estrelas": 4.4,
+        "Idade_Min": 18,
+        "Idade_Max": 35,
+        "Buscas": [
+            "Perfume da maçã",
+            "Maçã verde",
+            "Refrescante verão",
+            "DKNY Brasil",
+            "Frutal"
+        ]
+    },
+    {
+        "Rank": 84,
+        "Perfume": "Elysée Blanc",
+        "Marca": "O Boticário",
+        "Familia_Olfativa": "Chypre Floral",
+        "Ingrediente_Assinatura": "Jasmim Sambac",
+        "Preco_Min": 285,
+        "Preco_Max": 345,
+        "Estrelas": 4.6,
+        "Idade_Min": 30,
+        "Idade_Max": 55,
+        "Buscas": [
+            "Elysée original",
+            "Jasmim branco",
+            "Perfume elegante",
+            "Boticário Blanc",
+            "Noiva"
+        ]
+    },
+    {
+        "Rank": 85,
+        "Perfume": "Essencial Mirra",
+        "Marca": "Natura",
+        "Familia_Olfativa": "Oriental",
+        "Ingrediente_Assinatura": "Mirra e Resinas",
+        "Preco_Min": 225,
+        "Preco_Max": 265,
+        "Estrelas": 4.8,
+        "Idade_Min": 35,
+        "Idade_Max": 60,
+        "Buscas": [
+            "Perfume de mirra",
+            "Natura Essencial",
+            "Oriental nacional",
+            "Forte",
+            "Resinoso"
+        ]
+    },
+    {
+        "Rank": 86,
+        "Perfume": "L'Eau d'Issey",
+        "Marca": "I. Miyake",
+        "Familia_Olfativa": "Floral Aquático",
+        "Ingrediente_Assinatura": "Lótus e Melão",
+        "Preco_Min": 410,
+        "Preco_Max": 710,
+        "Estrelas": 4.7,
+        "Idade_Min": 30,
+        "Idade_Max": 65,
+        "Buscas": [
+            "Cheiro de água",
+            "Issey Miyake",
+            "Floral fresco",
+            "Elegante verão",
+            "Aquático"
+        ]
+    },
+    {
+        "Rank": 87,
+        "Perfume": "Coffee Lucky",
+        "Marca": "O Boticário",
+        "Familia_Olfativa": "Oriental Floral",
+        "Ingrediente_Assinatura": "Âmbar e Notas Frescas",
+        "Preco_Min": 165,
+        "Preco_Max": 205,
+        "Estrelas": 4.5,
+        "Idade_Min": 20,
+        "Idade_Max": 40,
+        "Buscas": [
+            "Coffee Boticário",
+            "Lucky feminino",
+            "Perfume sorte",
+            "Doce equilibrado",
+            "Dia"
+        ]
+    },
+    {
+        "Rank": 88,
+        "Perfume": "Very Sexy",
+        "Marca": "V. Secret",
+        "Familia_Olfativa": "Floral Frutal",
+        "Ingrediente_Assinatura": "Amora e Orquídea",
+        "Preco_Min": 410,
+        "Preco_Max": 660,
+        "Estrelas": 4.6,
+        "Idade_Min": 20,
+        "Idade_Max": 40,
+        "Buscas": [
+            "Victoria Secret Brasil",
+            "Perfume sensual",
+            "Amora negra",
+            "Importado",
+            "Sexy"
+        ]
+    },
+    {
+        "Rank": 89,
+        "Perfume": "Petit Libellule",
+        "Marca": "Avon",
+        "Familia_Olfativa": "Floral Frutal",
+        "Ingrediente_Assinatura": "Framboesa e Notas Verdes",
+        "Preco_Min": 45,
+        "Preco_Max": 75,
+        "Estrelas": 4.2,
+        "Idade_Min": 10,
+        "Idade_Max": 25,
+        "Buscas": [
+            "Perfume infantil",
+            "Avon Petit",
+            "Cheiro de menina",
+            "Barato",
+            "Framboesa"
+        ]
+    },
+    {
+        "Rank": 90,
+        "Perfume": "Chloé Nomade",
+        "Marca": "Chloé",
+        "Familia_Olfativa": "Chypre Floral",
+        "Ingrediente_Assinatura": "Musgo de Carvalho",
+        "Preco_Min": 560,
+        "Preco_Max": 860,
+        "Estrelas": 4.7,
+        "Idade_Min": 25,
+        "Idade_Max": 50,
+        "Buscas": [
+            "Chloé original vs Nomade",
+            "Chipre moderno",
+            "Perfume viagem",
+            "Musgo",
+            "Chique"
+        ]
+    },
+    {
+        "Rank": 91,
+        "Perfume": "Floratta My Blue",
+        "Marca": "O Boticário",
+        "Familia_Olfativa": "Floral Amadeirado",
+        "Ingrediente_Assinatura": "Íris e Musk",
+        "Preco_Min": 135,
+        "Preco_Max": 175,
+        "Estrelas": 4.5,
+        "Idade_Min": 20,
+        "Idade_Max": 50,
+        "Buscas": [
+            "Novo Floratta azul",
+            "Íris suave",
+            "Cheiro de conforto",
+            "Boticário My Blue",
+            "Dia"
+        ]
+    },
+    {
+        "Rank": 92,
+        "Perfume": "Una Infinito",
+        "Marca": "Natura",
+        "Familia_Olfativa": "Adocicado",
+        "Ingrediente_Assinatura": "Ameixa Negra e Cumaru",
+        "Preco_Min": 245,
+        "Preco_Max": 285,
+        "Estrelas": 4.8,
+        "Idade_Min": 28,
+        "Idade_Max": 55,
+        "Buscas": [
+            "Perfume Una forte",
+            "Natura Una Infinito",
+            "Noite",
+            "Ameixa",
+            "Fixação alta"
+        ]
+    },
+    {
+        "Rank": 93,
+        "Perfume": "Bright Crystal",
+        "Marca": "Versace",
+        "Familia_Olfativa": "Floral Frutal",
+        "Ingrediente_Assinatura": "Romã e Peônia",
+        "Preco_Min": 460,
+        "Preco_Max": 760,
+        "Estrelas": 4.6,
+        "Idade_Min": 20,
+        "Idade_Max": 50,
+        "Buscas": [
+            "Versace Rosa",
+            "Perfume delicado",
+            "Peônia",
+            "Joia Versace",
+            "Floral fresco"
+        ]
+    },
+    {
+        "Rank": 94,
+        "Perfume": "Egeo E. Me",
+        "Marca": "O Boticário",
+        "Familia_Olfativa": "Floral Oriental",
+        "Ingrediente_Assinatura": "Notas de Couro e Frutas",
+        "Preco_Min": 135,
+        "Preco_Max": 175,
+        "Estrelas": 4.3,
+        "Idade_Min": 18,
+        "Idade_Max": 35,
+        "Buscas": [
+            "Perfume unissex",
+            "Egeo E-Me",
+            "Diferente",
+            "Boticário colorido",
+            "Jovem"
+        ]
+    },
+    {
+        "Rank": 95,
+        "Perfume": "Amburana",
+        "Marca": "L'Occitane",
+        "Familia_Olfativa": "Oriental Amadeirado",
+        "Ingrediente_Assinatura": "Amburana e Baunilha",
+        "Preco_Min": 185,
+        "Preco_Max": 255,
+        "Estrelas": 4.7,
+        "Idade_Min": 25,
+        "Idade_Max": 60,
+        "Buscas": [
+            "L'Occitane au Brésil",
+            "Cheiro de madeira doce",
+            "Amburana",
+            "Nacional chique"
+        ]
+    },
+    {
+        "Rank": 96,
+        "Perfume": "Goldea",
+        "Marca": "Bvlgari",
+        "Familia_Olfativa": "Oriental Floral",
+        "Ingrediente_Assinatura": "Musk e Framboesa",
+        "Preco_Min": 510,
+        "Preco_Max": 860,
+        "Estrelas": 4.6,
+        "Idade_Min": 30,
+        "Idade_Max": 55,
+        "Buscas": [
+            "Perfume dourado",
+            "Bvlgari Goldea",
+            "Musk luxo",
+            "Framboesa",
+            "Noite"
+        ]
+    },
+    {
+        "Rank": 97,
+        "Perfume": "Linda",
+        "Marca": "O Boticário",
+        "Familia_Olfativa": "Floral",
+        "Ingrediente_Assinatura": "Gardênia e Âmbar",
+        "Preco_Min": 155,
+        "Preco_Max": 195,
+        "Estrelas": 4.5,
+        "Idade_Min": 30,
+        "Idade_Max": 60,
+        "Buscas": [
+            "Linda tradicional",
+            "Clássicos Boticário",
+            "Floral aberto",
+            "Perfume Linda preço"
+        ]
+    },
+    {
+        "Rank": 98,
+        "Perfume": "Kriska Alegria",
+        "Marca": "Natura",
+        "Familia_Olfativa": "Oriental Gourmet",
+        "Ingrediente_Assinatura": "Milho Caramelizado",
+        "Preco_Min": 115,
+        "Preco_Max": 145,
+        "Estrelas": 4.4,
+        "Idade_Min": 15,
+        "Idade_Max": 35,
+        "Buscas": [
+            "Cheiro de pipoca doce",
+            "Pure XS nacional",
+            "Natura Kriska",
+            "Diferente",
+            "Doce"
+        ]
+    },
+    {
+        "Rank": 99,
+        "Perfume": "Pure Seduction",
+        "Marca": "V. Secret",
+        "Familia_Olfativa": "Floral Frutal",
+        "Ingrediente_Assinatura": "Ameixa e Freesia",
+        "Preco_Min": 125,
+        "Preco_Max": 185,
+        "Estrelas": 4.2,
+        "Idade_Min": 12,
+        "Idade_Max": 30,
+        "Buscas": [
+            "Body Splash",
+            "Victoria Secret",
+            "Cheiro de fruta",
+            "Jovem",
+            "Pure Seduction preço"
+        ]
+    },
+    {
+        "Rank": 100,
+        "Perfume": "Anni",
+        "Marca": "O Boticário",
+        "Familia_Olfativa": "Floral Frutal",
+        "Ingrediente_Assinatura": "Frutas Doces e Flores",
+        "Preco_Min": 125,
+        "Preco_Max": 155,
+        "Estrelas": 4.4,
+        "Idade_Min": 12,
+        "Idade_Max": 40,
+        "Buscas": [
+            "Antigo Anni",
+            "Boticollection",
+            "Perfume de menina",
+            "Floral doce",
+            "Suave"
+        ]
+    }
+]

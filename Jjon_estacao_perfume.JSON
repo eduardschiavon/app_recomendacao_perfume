@@ -1,0 +1,47 @@
+{
+  "primavera": [
+    "Marc Jacobs Daisy",
+    "Chloé Eau de Parfum",
+    "Miss Dior Blooming Bouquet",
+    "O Boticário Floratta Flores Secretas"
+  ],
+  "verao": [
+    "Dolce & Gabbana Light Blue",
+    "Calvin Klein CK One",
+    "Natura Ekos Maracujá",
+    "Giorgio Armani Acqua di Gioia"
+  ],
+  "outono": [
+    "Chanel Coco Mademoiselle",
+    "Narciso Rodriguez For Her",
+    "O Boticário Elysée",
+    "Prada Paradoxe"
+  ],
+  "inverno": [
+    "Dior Hypnotic Poison",
+    "Yves Saint Laurent Black Opium",
+    "Lancôme La Nuit Trésor",
+    "Jean Paul Gaultier Scandal"
+  ],
+"calor": [
+    "Dolce & Gabbana Light Blue",
+    "Calvin Klein CK One",
+    "Natura Ekos Moça",
+    "Giorgio Armani Acqua di Gioia",
+    "Granado Limão Taiti & Néroli"
+  ],
+  "frio": [
+    "Dior Hypnotic Poison",
+    "Yves Saint Laurent Black Opium",
+    "Lancôme La Nuit Trésor",
+    "Jean Paul Gaultier Scandal",
+    "O Boticário Coffee Woman Seduction"
+  ],
+  "chuva": [
+    "Narciso Rodriguez For Her",
+    "Chloé Eau de Parfum",
+    "Prada Infusion d'Iris",
+    "Natura Essencial Mirra",
+    "O Boticário Elysée"
+  ]
+}

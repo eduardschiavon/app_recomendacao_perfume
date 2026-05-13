@@ -1,0 +1,167 @@
+{
+  "trabalho": [
+    "bergamota",
+    "limão siciliano",
+    "mandarina",
+    "néroli",
+    "musk",
+    "lavanda",
+    "alecrim",
+    "sálvia",
+    "peônia",
+    "jasmim leve",
+    "íris",
+    "chá branco",
+    "chá verde",
+    "cedro"
+  ],
+"noite": [
+    "Âmbar",
+    "Baunilha",
+    "Fava Tonka",
+    "Canela",
+    "Pimenta",
+    "Oud",
+    "Patchouli",
+    "Cedro",
+    "Chocolate",
+    "Caramelo",
+    "Café",
+    "Jasmim",
+    "Ylang-Ylang",
+    "Tuberosa"
+  ],
+"dia": [
+    "Limão",
+    "Bergamota",
+    "Laranja",
+    "Mandarina",
+    "Neroli",
+    "Lavanda",
+    "Menta",
+    "Alecrim",
+    "Chá Verde",
+    "Rosa",
+    "Peônia",
+    "Lírio",
+    "Frésia",
+    "Maçã Verde",
+    "Pêra",
+    "Melão",
+    "Notas Marinhas",
+    "Almíscar Branco",
+    "Bambu",
+    "Vetiver"
+  ],
+"escola": [
+    "Maçã Verde",
+    "Pêra",
+    "Melão",
+    "Almíscar Branco",
+    "Algodão",
+    "Lavanda",
+    "Camomila"
+  ],
+  "faculdade": [
+    "Chá Verde",
+    "Bambu",
+    "Neroli",
+    "Gengibre",
+    "Laranja",
+    "Mandarina",
+    "Cedro"
+  ],
+  "praia": [
+    "Notas Marinhas",
+    "Sal Marinho",
+    "Água de Coco",
+    "Limão",
+    "Bergamota",
+    "Menta",
+    "Melão"
+  ],
+  "ferias": [
+    "Frésia",
+    "Peônia",
+    "Manga",
+    "Abacaxi",
+    "Maracujá",
+    "Grumari",
+    "Verbena"
+  ],
+  "viagem": [
+    "Almíscar",
+    "Rosa Light",
+    "Íris",
+    "Madeira de Sândalo",
+    "Alecrim",
+    "Sálvia"
+  ],
+
+  "pos_banho": [
+    "Lavanda",
+    "Almíscar Branco",
+    "Camomila",
+    "Algodão",
+    "Notas Atalcadas",
+    "Chá Branco"
+  ],
+  "encontro_romantico": [
+    "Âmbar",
+    "Baunilha",
+    "Pimenta Rosa",
+    "Ylang-Ylang",
+    "Framboesa",
+    "Cereja",
+    "Almíscar Negro"
+  ],
+  "festa": [
+    "Jasmim Real",
+    "Tuberosa",
+    "Patchouli",
+    "Rosa Damascena",
+    "Pralinê",
+    "Madeira de Sândalo"
+  ],
+  "balada": [
+    "Fava Tonka",
+    "Baunilha Bourbon",
+    "Caramelo",
+    "Café",
+    "Lichia",
+    "Pimenta Preta"
+  ],
+  "reuniao": [
+    "Cedro",
+    "Íris",
+    "Vetiver",
+    "Bergamota",
+    "Chá Verde",
+    "Néroli"
+  ],
+  "atividades_fisicas": [
+    "Limão Siciliano",
+    "Menta",
+    "Hortelã",
+    "Eucalipto",
+    "Toranja",
+    "Notas Ozônicas",
+    "Bambu"
+  ],
+  "entrevista_de_emprego": [
+    "Lavanda",
+    "Almíscar",
+    "Alecrim",
+    "Gengibre",
+    "Sálvia",
+    "Laranja"
+  ],
+  "eventos_familiares": [
+    "Peônia",
+    "Frésia",
+    "Pêra",
+    "Melão",
+    "Maçã",
+    "Baunilha Leve"
+  ]
+}

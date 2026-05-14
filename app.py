@@ -16,6 +16,7 @@ def carregar_dados(nome_arquivo):
     return None
 
 def obter_signo(dia, mes):
+    # Lógica simplificada de signos
     if (mes == 3 and dia >= 21) or (mes == 4 and dia <= 19): return "aries"
     if (mes == 4 and dia >= 20) or (mes == 5 and dia <= 20): return "touro"
     if (mes == 5 and dia >= 21) or (mes == 6 and dia <= 20): return "gemeos"
@@ -33,11 +34,10 @@ def obter_signo(dia, mes):
 def gerar_selecao():
     try:
         dados = request.json
-        cidade = dados.get('cidade', 'nossa unidade')
-        ocasiao = dados.get('ocasiao', 'reuniao').lower()
+        ocasiao_key = dados.get('ocasiao', 'reuniao')
         data_str = dados.get('data_nasc', '').strip()
 
-        # Cálculo de idade e signo
+        # Cálculo de Signo e Idade
         partes = data_str.split('/')
         dia, mes, ano = int(partes[0]), int(partes[1]), int(partes[2])
         if ano < 100: ano += 1900 if ano > 25 else 2000
@@ -46,28 +46,26 @@ def gerar_selecao():
         if (hoje.month, hoje.day) < (mes, dia): idade -= 1
         signo = obter_signo(dia, mes)
 
+        # Carrega Bancos
         db_signos = carregar_dados('Jjon_signo_perfume.JSON')
         db_ocasiao = carregar_dados('Jjon_ocasiao_perfume.JSON')
         dataset = carregar_dados('dataset_perfumes.json')
 
-        # Sorteio Aleatório para Signo e Ocasião
+        # Sorteio com fallback
         p_signo = random.choice(db_signos.get(signo, ["Fragrancia Astral"]))
-        p_ocasiao = random.choice(db_ocasiao.get(ocasiao, ["Fragrancia Especial"]))
-
-        # Busca por Perfil Etário no Dataset
-        p_idade = "Uma fragrancia atemporal"
+        p_ocasiao = random.choice(db_ocasiao.get(ocasiao_key, ["Fragrancia Momento"]))
+        
+        # Busca Perfil Etário no Dataset principal
+        p_idade = "Uma fragrancia atemporal Schiavon"
         if dataset:
-            perfumes_na_faixa = [p['Perfume'] for p in dataset if p.get('Idade_Min', 0) <= idade <= p.get('Idade_Max', 100)]
-            if perfumes_na_faixa:
-                p_idade = random.choice(perfumes_na_faixa)
+            faixa = [p['Perfume'] for p in dataset if p.get('Idade_Min', 0) <= idade <= p.get('Idade_Max', 100)]
+            if faixa: p_idade = random.choice(faixa)
 
         return jsonify({
             "status": "sucesso",
-            "mensagem": f"Analise finalizada para {cidade}.",
-            "identidade": f"Sua aura de {signo.capitalize()} combina perfeitamente com o {p_signo}.",
-            "recomendacao": f"Para sua {ocasiao.replace('_',' ')}, o {p_ocasiao} trara o destaque ideal.",
-            "idade_perfil": f"Com base nos seus {idade} anos, o {p_idade} e nossa escolha exclusiva.",
-            "dica": "Dica de Especialista: Aplique atras das orelhas e nos pulsos para maior rastro."
+            "identidade": f"Sua aura de {signo.capitalize()} harmoniza com o {p_signo}.",
+            "recomendacao": f"Para sua ocasiao de {ocasiao_key.replace('_',' ')}, sugerimos o {p_ocasiao}.",
+            "idade_perfil": f"Para seu perfil de {idade} anos, o {p_idade} e nossa escolha especial."
         })
     except Exception as e:
         return jsonify({"status": "erro", "mensagem": str(e)})
@@ -76,24 +74,27 @@ def gerar_selecao():
 def buscar():
     termo = request.args.get('termo', '').lower().strip()
     dataset = carregar_dados('dataset_perfumes.json')
-    if not dataset: return jsonify({"resultado": "Catalogo offline."})
+    if not dataset or not termo: return jsonify({"resultado": "Digite um termo para busca."})
 
     for p in dataset:
-        # Busca em TODOS os campos possíveis para o efeito "UAU"
-        nome = p.get('Perfume', '').lower()
-        marca = p.get('Marca', '').lower()
-        familia = p.get('Familia_Olfativa', '').lower()
-        ingredientes = p.get('Ingrediente_Assinatura', '').lower()
-        buscas_relacionadas = [b.lower() for b in p.get('Buscas', [])]
-
-        if termo in nome or termo in marca or termo in familia or termo in ingredientes or termo in buscas_relacionadas:
+        # Busca em todos os campos para o efeito "UAU"
+        campos = [
+            str(p.get('Perfume', '')),
+            str(p.get('Marca', '')),
+            str(p.get('Familia_Olfativa', '')),
+            str(p.get('Ingrediente_Assinatura', '')),
+            " ".join(p.get('Buscas', []))
+        ]
+        
+        if any(termo in c.lower() for c in campos):
             return jsonify({
                 "resultado": f"✨ <strong>{p['Perfume']}</strong> ({p['Marca']})<br>" +
-                             f"💎 Família: {p['Familia_Olfativa']}<br>" +
-                             f"🌿 Notas Principais: {p['Ingrediente_Assinatura']}<br>" +
+                             f"💎 Estilo: {p['Familia_Olfativa']}<br>" +
+                             f"🌿 Notas: {p['Ingrediente_Assinatura']}<br>" +
                              f"⭐ Avaliação: {p['Estrelas']} estrelas"
             })
-    return jsonify({"resultado": "Nao encontramos essa nota ou perfume em nosso acervo atual."})
+            
+    return jsonify({"resultado": "Nao encontramos essa nota no acervo Schiavon ainda."})
 
 if __name__ == '__main__':
     app.run(host='0.0.0.0', port=5000)

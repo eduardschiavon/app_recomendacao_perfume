@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Boutique Schiavon - Consultoria de Assinatura</title>
+    <title>Boutique Schiavon - Consultoria</title>
     <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&family=Montserrat:wght@300;400;600&display=swap" rel="stylesheet">
     <style>
         :root {
@@ -29,33 +29,35 @@
             text-align: center;
         }
 
+        /* Logo Flat no Topo */
         .logo-topo {
-            width: 150px;
+            width: 160px;
             height: auto;
             margin-bottom: 10px;
         }
 
         h1 { 
             font-family: 'Cinzel', serif;
-            font-size: 1rem;
+            font-size: 0.9rem;
             color: var(--ouro);
-            letter-spacing: 1px;
+            letter-spacing: 2px;
             text-transform: uppercase;
             margin-bottom: 30px;
         }
 
         .form-group { text-align: left; margin-bottom: 15px; }
         
-        label { display: block; font-size: 0.8rem; color: #666; margin-bottom: 5px; text-transform: uppercase; }
+        label { display: block; font-size: 0.75rem; color: #666; margin-bottom: 5px; text-transform: uppercase; font-weight: 600; }
 
         input, select { 
             width: 100%; 
             padding: 12px; 
-            border: 1px solid #ddd;
+            border: 1px solid #ccc;
             border-radius: 4px;
             font-family: inherit;
             background: #fff;
             box-sizing: border-box;
+            outline: none;
         }
 
         .btn-revelar { 
@@ -71,161 +73,162 @@
             font-weight: 700;
             text-transform: uppercase;
             letter-spacing: 2px;
+            transition: 0.3s;
         }
 
-        /* ESTILO CARTÃO PREMIUM (O que você queria de volta) */
+        .btn-revelar:hover { background: #000; }
+
+        /* Resultado em Estilo Cartão Premium */
         #resultado { 
             display: none; 
             margin-top: 30px; 
-            animation: fadeIn 0.8s ease;
+            animation: fadeIn 0.8s ease forwards;
         }
 
-        .card-consultoria {
+        .card-premium {
             background: var(--preto);
             color: #fff;
-            padding: 30px;
-            border-radius: 4px;
-            position: relative;
+            padding: 35px 25px;
+            border-radius: 2px;
             text-align: left;
             border: 1px solid var(--ouro);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
         }
 
-        .selo-presenca {
-            width: 120px;
-            display: block;
-            margin: 0 auto 20px;
-        }
-
-        h2.assinatura-titulo {
+        h2.card-titulo {
             font-family: 'Cinzel', serif;
             color: var(--ouro);
             font-size: 1.1rem;
             text-align: center;
-            margin-bottom: 25px;
-            text-transform: uppercase;
+            margin-top: 0;
+            margin-bottom: 30px;
+            letter-spacing: 1px;
+            border-bottom: 1px solid #333;
+            padding-bottom: 15px;
         }
 
-        .item-res { margin-bottom: 15px; line-height: 1.5; }
-        .label-ouro { color: var(--ouro); font-weight: 600; text-transform: uppercase; font-size: 0.75rem; display: block; }
+        .bloco-info { margin-bottom: 20px; }
+        .label-ouro { color: var(--ouro); font-weight: 600; text-transform: uppercase; font-size: 0.7rem; display: block; margin-bottom: 4px; }
+        .texto-res { font-size: 0.95rem; line-height: 1.5; font-weight: 300; }
 
-        .dica-especial { 
-            font-size: 0.85rem; 
-            color: #bbb; 
-            font-style: italic; 
-            border-top: 1px solid #333; 
+        .dica-uso { 
+            margin-top: 25px; 
             padding-top: 15px; 
-            margin-top: 15px; 
+            border-top: 1px solid #333; 
+            font-size: 0.85rem; 
+            color: #aaa; 
+            font-style: italic; 
             display: block;
         }
 
-        .btn-reset {
+        .btn-voltar {
             background: none;
             border: none;
-            color: var(--ouro);
+            color: #888;
             text-decoration: underline;
-            margin-top: 25px;
+            margin-top: 30px;
             cursor: pointer;
-            font-size: 0.8rem;
             font-family: 'Cinzel', serif;
+            font-size: 0.75rem;
         }
 
-        @keyframes fadeIn { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: translateY(0); } }
+        @keyframes fadeIn { from { opacity: 0; transform: translateY(15px); } to { opacity: 1; transform: translateY(0); } }
     </style>
 </head>
 <body>
 
 <div class="container">
-    <img src="flat.jpg" alt="Logo Boutique Schiavon" class="logo-topo">
+    <img src="flat.jpg" alt="Boutique Schiavon" class="logo-topo">
     <h1>Consultoria de Assinatura</h1>
     
-    <div id="formulario">
+    <div id="sessao-input">
         <div class="form-group">
             <label>Data de Nascimento</label>
-            <input type="text" id="data_nasc" placeholder="Ex: 19/02/1984">
+            <input type="text" id="data_nasc" placeholder="DD/MM/AAAA">
         </div>
 
         <div class="form-group">
-            <label>Nota Olfativa Favorita</label>
-            <input type="text" id="nota_favorita" placeholder="Ex: Café, Baunilha...">
+            <label>Nota Olfativa de Preferência</label>
+            <input type="text" id="nota_user" placeholder="Ex: Baunilha, Sândalo...">
         </div>
         
         <div class="form-group">
-            <label>Ocasião</label>
+            <label>Ocasião Desejada</label>
             <select id="ocasiao">
                 <option value="reuniao">Trabalho / Reunião</option>
-                <option value="festa">Festa / Evento</option>
+                <option value="festa">Festa / Evento Social</option>
                 <option value="encontro_romantico">Encontro Romântico</option>
-                <option value="balada">Balada</option>
-                <option value="atividades_fisicas">Atividades Físicas</option>
+                <option value="balada">Noite / Balada</option>
+                <option value="atividades_fisicas">Esportes</option>
             </select>
         </div>
         
-        <button class="btn-revelar" onclick="gerarAnalise()">Revelar Minha Seleção</button>
+        <button class="btn-revelar" onclick="analisarPerfumes()">Revelar Minha Seleção</button>
     </div>
 
     <div id="resultado">
-        <div class="card-consultoria">
-            <img src="Gemini_Generated_Image_jj1o7cjj1o7cjj1o.png" alt="Selo Presença" class="selo-presenca">
-            <h2 class="assinatura-titulo">Sua assinatura Presença</h2>
+        <div class="card-premium">
+            <h2 class="card-titulo">Sua Curadoria Presença</h2>
 
-            <div class="item-res">
-                <span class="label-ouro">Identidade Astral:</span>
-                <span id="res-identidade"></span>
+            <div class="bloco-info">
+                <span class="label-ouro">Sua Identidade Astral:</span>
+                <span id="res-identidade" class="texto-res"></span>
             </div>
 
-            <div class="item-res">
-                <span class="label-ouro">Recomendação Schiavon:</span>
-                <span id="res-recomendacao"></span>
+            <div class="bloco-info">
+                <span class="label-ouro">Sugestão Schiavon:</span>
+                <span id="res-recomendacao" class="texto-res"></span>
             </div>
 
-            <div class="item-res">
-                <span class="label-ouro">Perfil Etário:</span>
-                <span id="res-idade"></span>
+            <div class="bloco-info">
+                <span class="label-ouro">Perfil Sugerido:</span>
+                <span id="res-idade" class="texto-res"></span>
             </div>
             
-            <span class="dica-especial">
-                Como você aprecia <strong id="res-nota-txt" style="color:var(--ouro);"></strong>, sugerimos aplicar a fragrância em pontos de pulsação para potencializar o rastro.
+            <span class="dica-uso">
+                Nota Personalizada: Como você aprecia <span id="res-nota-cliente" style="color:var(--ouro)"></span>, aplique a fragrância em pontos de pulsação para uma performance superior.
             </span>
         </div>
         
-        <button class="btn-reset" onclick="window.location.reload()">Fazer Nova Consulta</button>
+        <button class="btn-voltar" onclick="window.location.reload()">Realizar Nova Consultoria</button>
     </div>
 </div>
 
 <script>
-    async function gerarAnalise() {
+    async function analisarPerfumes() {
         const btn = document.querySelector('.btn-revelar');
-        const notaInput = document.getElementById('nota_favorita').value;
-        btn.innerText = "CONSULTANDO ACERVO...";
+        const nota = document.getElementById('nota_user').value;
+        btn.innerText = "BUSCANDO NO ACERVO...";
         
         const payload = {
             data_nasc: document.getElementById('data_nasc').value,
             ocasiao: document.getElementById('ocasiao').value,
-            cidade: "Duque de Caxias" // Valor padrão
+            cidade: "Duque de Caxias"
         };
 
         try {
-            const resp = await fetch('https://app-perfumes-qf4c.onrender.com/selecao', {
+            // Conexão com seu backend no Render
+            const resposta = await fetch('https://app-perfumes-qf4c.onrender.com/selecao', {
                 method: 'POST',
                 headers: {'Content-Type': 'application/json'},
                 body: JSON.stringify(payload)
             });
             
-            const r = await resp.json();
+            const dados = await resposta.json();
 
-            // CORREÇÃO DO ERRO UNDEFINED:
-            // Verificamos se o r.identidade existe, senão usamos r.mensagem ou um fallback
-            document.getElementById('formulario').style.display = 'none';
+            // Esconde formulário e mostra cartão
+            document.getElementById('sessao-input').style.display = 'none';
             document.getElementById('resultado').style.display = 'block';
             
-            document.getElementById('res-identidade').innerText = r.identidade || "Análise astral indisponível";
-            document.getElementById('res-recomendacao').innerText = r.recomendacao || "Fragrância sob consulta";
-            document.getElementById('res-idade').innerText = r.idade_perfil || "Perfil atemporal";
-            document.getElementById('res-nota-txt').innerText = notaInput || "notas nobres";
+            // Mapeamento correto dos dados do seu app.py para evitar 'undefined'
+            document.getElementById('res-identidade').innerText = dados.identidade;
+            document.getElementById('res-recomendacao').innerText = dados.recomendacao;
+            document.getElementById('res-idade').innerText = dados.idade_perfil;
+            document.getElementById('res-nota-cliente').innerText = nota || "notas nobres";
 
-        } catch (e) {
-            console.error(e);
-            alert("Erro na conexão com o servidor. Verifique se o backend no Render está ativo.");
+        } catch (erro) {
+            console.error("Erro na API:", erro);
+            alert("Não foi possível acessar a consultoria agora. Verifique se o seu servidor no Render está ativo.");
             btn.innerText = "REVELAR MINHA SELEÇÃO";
         }
     }

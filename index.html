@@ -5,16 +5,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Consultoria de Fragrâncias</title>
     <style>
-        body { font-family: 'Segoe UI', Arial, sans-serif; background-color: #f8f9fa; color: #333; display: flex; justify-content: center; align-items: center; min-height: 100vh; margin: 0; padding: 20px; }
-        .container { background: white; padding: 40px; border-radius: 8px; box-shadow: 0 4px 6px rgba(0,0,0,0.05); width: 100%; max-width: 500px; }
+        body { font-family: 'Segoe UI', Arial, sans-serif; background-color: #f8f9fa; color: #333; display: flex; justify-content: center; min-height: 100vh; margin: 0; padding: 20px; }
+        .container { background: white; padding: 40px; border-radius: 8px; box-shadow: 0 4px 6px rgba(0,0,0,0.05); width: 100%; max-width: 500px; height: fit-content; }
         h1 { font-size: 1.5rem; font-weight: 400; text-align: center; margin-bottom: 30px; letter-spacing: 1px; text-transform: uppercase; }
         .form-group { margin-bottom: 20px; }
         label { display: block; font-size: 0.9rem; margin-bottom: 8px; color: #666; }
         input, select { width: 100%; padding: 12px; border: 1px solid #ddd; border-radius: 4px; box-sizing: border-box; font-size: 1rem; }
-        button { width: 100%; padding: 15px; background-color: #333; color: white; border: none; border-radius: 4px; font-size: 1rem; cursor: pointer; text-transform: uppercase; letter-spacing: 1px; }
-        #resultado { margin-top: 30px; padding: 20px; border-top: 1px solid #eee; display: none; line-height: 1.6; }
+        button { width: 100%; padding: 15px; background-color: #333; color: white; border: none; border-radius: 4px; font-size: 1rem; cursor: pointer; text-transform: uppercase; margin-top: 10px; }
+        #resultado, #busca-extra { margin-top: 30px; padding: 20px; border-top: 1px solid #eee; display: none; line-height: 1.6; }
         .loading { text-align: center; font-size: 0.9rem; color: #999; display: none; margin-top: 20px; }
-        .btn-nova { margin-top: 20px; background-color: #777; font-size: 0.8rem; padding: 10px; }
+        .btn-reset { background-color: #777; font-size: 0.8rem; margin-top: 20px; }
     </style>
 </head>
 <body>
@@ -22,44 +22,54 @@
 <div class="container">
     <h1>Consultoria de Fragrâncias</h1>
     
-    <div id="formulario">
+    <div id="formulario-perfil">
         <div class="form-group">
             <label>Cidade</label>
-            <input type="text" id="cidade" placeholder="Ex: Rio de Janeiro">
+            <input type="text" id="cidade" placeholder="Ex: Duque de Caxias">
         </div>
         <div class="form-group">
             <label>Data de Nascimento</label>
             <input type="text" id="data_nasc" placeholder="DD/MM/AAAA">
         </div>
         <div class="form-group">
-            <label>Nota Olfativa Favorita</label>
-            <input type="text" id="nota_fav" placeholder="Ex: Baunilha, Amadeirado">
+            <label>Nota Favorita</label>
+            <input type="text" id="nota_fav" placeholder="Ex: Baunilha, Café">
         </div>
         <div class="form-group">
             <label>Ocasião</label>
             <select id="ocasiao">
-                <option value="pos_banho">Pós banho</option>
-                <option value="encontro_romantico">Encontro Romântico</option>
-                <option value="festa">Festa</option>
-                <option value="balada">Balada</option>
                 <option value="reuniao">Trabalho / Reunião</option>
-                <option value="atividades_fisicas">Atividades Físicas</option>
-                <option value="entrevista_de_emprego">Entrevista de Emprego</option>
+                <option value="festa">Festa</option>
+                <option value="encontro_romantico">Encontro</option>
+                <option value="balada">Balada</option>
+                <option value="atividades_fisicas">Esportes</option>
             </select>
         </div>
-        <button onclick="enviarConsulta()">Revelar Seleção</button>
+        <button onclick="enviarPerfil()">Revelar Minha Assinatura</button>
     </div>
 
-    <div id="loading" class="loading">Consultando especialistas...</div>
+    <div id="loading" class="loading">Processando sua consultoria...</div>
+
     <div id="resultado"></div>
+
+    <div id="busca-extra">
+        <hr>
+        <h3>Deseja consultar uma fragrância específica?</h3>
+        <p style="font-size: 0.8rem; color: #666;">Busque por nome do perfume ou nota olfativa (ex: Rosa, Oud, Jasmin)</p>
+        <div class="form-group">
+            <input type="text" id="termo_busca" placeholder="Digite o perfume ou nota...">
+        </div>
+        <button onclick="buscarFragrancia()" style="background-color: #555;">Consultar Detalhes</button>
+        <div id="res-busca" style="margin-top: 15px; font-weight: bold;"></div>
+        
+        <button class="btn-reset" onclick="window.location.reload()">Nova Consultoria Completa</button>
+    </div>
 </div>
 
 <script>
-    async function enviarConsulta() {
-        const resDiv = document.getElementById('resultado');
-        const loadDiv = document.getElementById('loading');
-        const formDiv = document.getElementById('formulario');
+    const API_URL = 'https://app-perfumes-qf4c.onrender.com';
 
+    async function enviarPerfil() {
         const dados = {
             cidade: document.getElementById('cidade').value,
             data_nasc: document.getElementById('data_nasc').value,
@@ -67,42 +77,45 @@
             ocasiao: document.getElementById('ocasiao').value
         };
 
-        if (!dados.cidade || !dados.data_nasc || !dados.nota_fav) {
-            alert("Preencha todos os campos.");
-            return;
-        }
-
-        formDiv.style.display = 'none';
-        loadDiv.style.display = 'block';
+        document.getElementById('formulario-perfil').style.display = 'none';
+        document.getElementById('loading').style.display = 'block';
 
         try {
-            const response = await fetch('https://app-perfumes-qf4c.onrender.com/selecao', {
+            const response = await fetch(`${API_URL}/selecao`, {
                 method: 'POST',
                 headers: { 'Content-Type': 'application/json' },
                 body: JSON.stringify(dados)
             });
-
             const r = await response.json();
 
-            if (r.status === "sucesso") {
-                resDiv.innerHTML = `
-                    <p>${r.mensagem}</p>
-                    <p><strong>Identidade:</strong> ${r.identidade}</p>
-                    <p><strong>Recomendação:</strong> ${r.recomendacao}</p>
-                    <p><strong>Perfil Etário:</strong> ${r.idade_perfil}</p>
-                    <p><em>${r.dica}</em></p>
-                    <button class="btn-nova" onclick="window.location.reload()">Fazer Nova Consulta</button>
-                `;
-                resDiv.style.display = 'block';
-            } else {
-                alert("Erro na API: " + r.mensagem);
-                formDiv.style.display = 'block';
-            }
-        } catch (error) {
-            alert("Servidor em standby. Tente novamente em 30 segundos.");
-            formDiv.style.display = 'block';
+            document.getElementById('resultado').innerHTML = `
+                <p>${r.mensagem}</p>
+                <p><strong>Identidade:</strong> ${r.identidade}</p>
+                <p><strong>Recomendação:</strong> ${r.recomendacao}</p>
+                <p><strong>Perfil Etário:</strong> ${r.idade_perfil}</p>
+            `;
+            document.getElementById('resultado').style.display = 'block';
+            document.getElementById('busca-extra').style.display = 'block'; // ABRE A SEGUNDA PARTE
+        } catch (e) {
+            alert("Erro ao conectar. Tente novamente.");
+            document.getElementById('formulario-perfil').style.display = 'block';
         } finally {
-            loadDiv.style.display = 'none';
+            document.getElementById('loading').style.display = 'none';
+        }
+    }
+
+    async function buscarFragrancia() {
+        const termo = document.getElementById('termo_busca').value;
+        const resBusca = document.getElementById('res-busca');
+        
+        resBusca.innerHTML = "Buscando no catálogo...";
+        
+        try {
+            const response = await fetch(`${API_URL}/buscar?termo=${termo}`);
+            const r = await response.json();
+            resBusca.innerHTML = r.resultado;
+        } catch (e) {
+            resBusca.innerHTML = "Erro ao buscar fragrância.";
         }
     }
 </script>

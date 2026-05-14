@@ -15,6 +15,7 @@ def carregar_dados(nome_arquivo):
     return None
 
 def obter_signo(dia, mes):
+    # Removi acentos das chaves para bater com o seu JSON
     if (mes == 3 and dia >= 21) or (mes == 4 and dia <= 19): return "aries"
     if (mes == 4 and dia >= 20) or (mes == 5 and dia <= 20): return "touro"
     if (mes == 5 and dia >= 21) or (mes == 6 and dia <= 20): return "gemeos"
@@ -34,47 +35,62 @@ def gerar_selecao():
         dados = request.json
         cidade = dados.get('cidade', 'nao informada')
         ocasiao = dados.get('ocasiao', 'dia_a_dia').lower()
-        data_nasc = dados.get('data_nasc', '')
+        data_string = dados.get('data_nasc', '').strip()
 
-        # Carregar arquivos
+        # --- LÓGICA DE DATA REFORÇADA ---
+        try:
+            # Tenta converter a data. Se o usuário digitar 84, vira 1984.
+            partes = data_string.split('/')
+            dia = int(partes[0])
+            mes = int(partes[1])
+            ano = int(partes[2])
+            
+            if ano < 100: # Se digitaram só "84"
+                ano += 1900 if ano > 25 else 2000
+            
+            hoje = datetime.now()
+            idade = hoje.year - ano
+            # Ajuste fino: se ainda não fez aniversário este ano, subtrai 1
+            if (hoje.month, hoje.day) < (mes, dia):
+                idade -= 1
+                
+            signo = obter_signo(dia, mes)
+        except Exception as e:
+            print(f"Erro na data: {e}")
+            idade = 0
+            signo = "peixes" # Fallback se der erro
+        # --------------------------------
+
         db_signos = carregar_dados('Jjon_signo_perfume.JSON')
         db_ocasiao = carregar_dados('Jjon_ocasiao_perfume.JSON')
         dataset = carregar_dados('dataset_perfumes.json')
 
-        # Cálculo de Idade e Signo
-        try:
-            data_dt = datetime.strptime(data_nasc, "%d/%m/%Y")
-            idade = datetime.now().year - data_dt.year
-            signo = obter_signo(data_dt.day, data_dt.month)
-        except:
-            idade = 30
-            signo = "aries"
-
-        # Busca por Idade no Dataset
-        perfume_idade = "Fragrancia de Prestígio"
+        # Busca por Idade
+        perfume_idade = "Fragrancia de Prestigio"
         if dataset:
             for p in dataset:
-                # Verificando se as chaves existem no seu JSON (Idade_Min ou idade_min)
                 i_min = p.get('Idade_Min') or p.get('idade_min', 0)
                 i_max = p.get('Idade_Max') or p.get('idade_max', 100)
                 if i_min <= idade <= i_max:
                     perfume_idade = p.get('Perfume', 'Fragrancia Especial')
                     break
 
-        # Busca por Signo e Ocasiao
         p_signo = db_signos.get(signo, ["Fragrancia Astral"])[0] if db_signos else "Fragrancia Astral"
         p_ocasiao = db_ocasiao.get(ocasiao, ["Fragrancia Momento"])[0] if db_ocasiao else "Fragrancia Momento"
 
         return jsonify({
             "status": "sucesso",
-            "mensagem": f"Selecao preparada para cliente em {cidade}.",
+            "mensagem": f"Seleção preparada para cliente em {cidade}.",
             "identidade": f"Sua assinatura baseada no signo de {signo.capitalize()} sugere {p_signo}.",
-            "recomendacao": f"Para {ocasiao.replace('_',' ')}, a nossa escolha principal e o {p_ocasiao}.",
-            "idade_perfil": f"Considerando o seu perfil de {idade} anos, o {perfume_idade} e a nossa recomendacao especial.",
-            "dica": "Aplique nos pontos de pulsacao para uma melhor performance da fragrancia."
+            "recomendacao": f"Para {ocasiao.replace('_',' ')}, a nossa escolha principal é o {p_ocasiao}.",
+            "idade_perfil": f"Considerando o seu perfil de {idade} anos, o {perfume_idade} é a nossa recomendação especial.",
+            "dica": "Aplique nos pontos de pulsação para uma melhor performance da fragrância."
         })
     except Exception as e:
         return jsonify({"status": "erro", "mensagem": str(e)})
+        
+
+        
 
 if __name__ == '__main__':
     port = int(os.environ.get("PORT", 5000))

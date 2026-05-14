@@ -3,13 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Boutique Schiavon - Consultoria de Fragrâncias</title>
+    <title>Boutique Schiavon - Consultoria de Assinatura</title>
     <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&family=Montserrat:wght@300;400;600&display=swap" rel="stylesheet">
     <style>
         :root {
             --ouro: #d4af37;
             --preto: #1a1a1a;
-            --creme: #fafafa;
+            --creme: #f5f2e9; /* Fundo creme conforme a imagem */
         }
 
         body { 
@@ -19,202 +19,182 @@
             margin: 0; 
             padding: 20px; 
             display: flex; 
-            justify-content: center; 
+            flex-direction: column;
+            align-items: center; 
         }
 
         .container { 
             max-width: 480px; 
             width: 100%; 
-            background: #fff;
-            padding: 40px 30px; 
-            border-radius: 4px;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.05);
-            border-top: 5px solid var(--ouro);
+            text-align: center;
         }
 
-        .header { text-align: center; margin-bottom: 30px; }
-        .logo-placeholder { 
-            width: 80px; 
-            height: 80px; 
-            background: var(--preto); 
-            border-radius: 50%; 
-            margin: 0 auto 15px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            border: 2px solid var(--ouro);
+        /* Topo: Logotipo Pantera */
+        .logo-topo {
+            width: 120px;
+            height: auto;
+            margin-bottom: 10px;
         }
 
         h1 { 
             font-family: 'Cinzel', serif;
-            font-size: 1.4rem;
-            letter-spacing: 3px; 
-            text-transform: uppercase; 
-            margin: 0;
-            color: var(--preto);
+            font-size: 1.1rem;
+            color: var(--ouro);
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            margin-bottom: 30px;
         }
 
-        .subtitle { font-size: 0.7rem; color: var(--ouro); letter-spacing: 2px; margin-top: 5px; }
-
-        label { display: block; margin-top: 20px; font-size: 0.75rem; font-weight: 600; text-transform: uppercase; color: #666; }
+        /* Estilização dos Campos de Entrada */
+        .form-group { text-align: left; margin-bottom: 15px; }
         
+        label { 
+            display: block; 
+            font-size: 0.85rem; 
+            color: #444; 
+            margin-bottom: 5px; 
+        }
+
         input, select { 
             width: 100%; 
-            padding: 12px 0; 
-            margin-top: 5px; 
-            border: none;
-            border-bottom: 1px solid #ddd;
+            padding: 12px; 
+            border: 1px solid #ccc;
+            border-radius: 5px;
             font-family: inherit;
-            font-size: 1rem;
-            outline: none;
-            transition: border-color 0.3s;
+            background: #fff;
+            box-sizing: border-box;
         }
 
-        input:focus { border-bottom-color: var(--ouro); }
-
-        button { 
+        /* Botão Principal Dourado */
+        .btn-revelar { 
             width: 100%; 
-            padding: 18px; 
+            padding: 15px; 
             background: var(--preto); 
             color: var(--ouro); 
-            border: 1px solid var(--ouro);
-            margin-top: 30px; 
+            border: none;
+            border-radius: 5px;
+            margin-top: 20px; 
             cursor: pointer; 
-            font-family: 'Cinzel', serif;
             font-weight: 700;
-            letter-spacing: 2px;
-            transition: all 0.3s;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            transition: 0.3s;
         }
 
-        button:hover { background: var(--ouro); color: var(--preto); }
+        .btn-revelar:hover { opacity: 0.9; }
 
-        #resultado, #secao-busca { display: none; margin-top: 40px; animation: fadeIn 0.6s ease; }
-
-        @keyframes fadeIn { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: translateY(0); } }
-
-        .card-consultoria {
-            background: var(--preto);
-            color: #fff;
-            padding: 25px;
-            border-radius: 2px;
-            position: relative;
+        /* Resultado em Cartão Premium */
+        #resultado { 
+            display: none; 
+            margin-top: 40px; 
+            animation: fadeIn 0.8s ease forwards;
         }
 
-        .card-consultoria::after {
-            content: "";
-            position: absolute;
-            top: 10px; left: 10px; right: 10px; bottom: 10px;
-            border: 1px solid rgba(212, 175, 55, 0.3);
-            pointer-events: none;
+        @keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
+
+        .selo-presenca {
+            width: 100px;
+            margin-bottom: 15px;
         }
 
-        .item-resultado { margin-bottom: 15px; }
-        .titulo-item { color: var(--ouro); font-size: 0.7rem; text-transform: uppercase; display: block; margin-bottom: 3px; }
+        h2.assinatura-titulo {
+            font-family: 'Cinzel', serif;
+            color: var(--ouro);
+            font-size: 1.2rem;
+            margin-bottom: 20px;
+        }
+
+        .card-conteudo {
+            text-align: left;
+            line-height: 1.6;
+            font-size: 0.95rem;
+        }
+
+        .label-resultado { font-weight: 700; }
         
-        .busca-especifica { margin-top: 30px; padding-top: 20px; border-top: 1px solid #eee; }
+        .dica-uso { font-style: italic; color: #555; margin-top: 20px; display: block; }
+
+        .btn-nova-consulta {
+            background: none;
+            border: none;
+            color: #888;
+            text-decoration: underline;
+            margin-top: 30px;
+            cursor: pointer;
+            font-size: 0.8rem;
+        }
     </style>
 </head>
 <body>
 
 <div class="container">
-    <div class="header">
-        <div class="logo-placeholder">
-            <span style="color: var(--ouro); font-family: 'Cinzel'; font-size: 1.5rem;">S</span>
-        </div>
-        <h1>Boutique Schiavon</h1>
-        <div class="subtitle">Consultoria de Assinatura</div>
-    </div>
+    <img src="flat.jpg" alt="Logo Boutique Schiavon" class="logo-topo">
+    <h1>Boutique Schiavon - Consultoria de Assinatura</h1>
     
-    <div id="fluxo-principal">
-        <label>Cidade</label>
-        <input type="text" id="cidade" placeholder="Ex: Duque de Caxias">
+    <div id="formulario">
+        <div class="form-group">
+            <label>Data de Nascimento</label>
+            <input type="text" id="data_nasc" placeholder="19/02/84">
+        </div>
+
+        <div class="form-group">
+            <label>Nota Olfativa Favorita</label>
+            <input type="text" id="nota_favorita" placeholder="Baunilha">
+        </div>
         
-        <label>Data de Nascimento</label>
-        <input type="text" id="data_nasc" placeholder="DD/MM/AAAA">
+        <div class="form-group">
+            <label>Ocasião</label>
+            <select id="ocasiao">
+                <option value="reuniao">Trabalho</option>
+                <option value="festa">Festa</option>
+                <option value="encontro_romantico">Encontro</option>
+                <option value="balada">Balada</option>
+            </select>
+        </div>
         
-        <label>Ocasião Desejada</label>
-        <select id="ocasiao">
-            <option value="reuniao">Trabalho Profissional</option>
-            <option value="festa">Eventos e Festas</option>
-            <option value="encontro_romantico">Encontro Romântico</option>
-            <option value="balada">Noite e Balada</option>
-            <option value="atividades_fisicas">Esporte e Bem-estar</option>
-        </select>
-        
-        <button onclick="gerarAnalise()">Revelar Minha Seleção</button>
+        <button class="btn-revelar" onclick="gerarAnalise()">Revelar Minha Seleção</button>
     </div>
 
     <div id="resultado">
-        <div class="card-consultoria">
-            <div class="item-resultado">
-                <span class="titulo-item">Identidade Astral</span>
-                <div id="res-identidade"></div>
-            </div>
-            <div class="item-resultado">
-                <span class="titulo-item">Sugestão para Ocasião</span>
-                <div id="res-recomendacao"></div>
-            </div>
-            <div class="item-resultado">
-                <span class="titulo-item">Perfil Etário</span>
-                <div id="res-idade"></div>
-            </div>
+        <img src="Gemini_Generated_Image_jj1o7cjj1o7cjj1o.png" alt="Selo Presença" class="selo-presenca">
+        <h2 class="assinatura-titulo">Sua assinatura Presença</h2>
+
+        <div class="card-conteudo">
+            <p><span class="label-resultado">Identidade:</span> <span id="res-identidade"></span></p>
+            <p><span class="label-resultado">Recomendação:</span> <span id="res-recomendacao"></span></p>
+            
+            <span class="dica-uso">Como você aprecia <span id="res-nota"></span>, recomendamos aplicar o perfume em pontos de pulsação.</span>
+            <span class="dica-uso">Aplique nos pontos de pulsação para uma melhor performance da fragrância.</span>
         </div>
         
-        <div class="busca-especifica">
-            <label>Deseja consultar uma nota específica?</label>
-            <input type="text" id="termo_busca" placeholder="Ex: Jasmim, Cacau, Rosa...">
-            <button onclick="buscarManual()" style="margin-top:10px; padding: 12px;">Consultar Detalhes</button>
-            <div id="res-manual" style="margin-top:15px; font-size: 0.9rem; color: #444;"></div>
-        </div>
-        
-        <button onclick="window.location.reload()" style="background:none; color:#999; border:none; font-size:0.7rem; margin-top:20px;">Fazer Nova Consulta</button>
+        <button class="btn-nova-consulta" onclick="window.location.reload()">Fazer Nova Consulta</button>
     </div>
 </div>
 
 <script>
-    const API_URL = 'https://app-perfumes-qf4c.onrender.com'; // Mantenha sua URL do Render aqui
-
     async function gerarAnalise() {
-        const btn = document.querySelector('button');
-        btn.innerText = "ANALISANDO...";
-        
         const payload = {
-            cidade: document.getElementById('cidade').value,
             data_nasc: document.getElementById('data_nasc').value,
-            ocasiao: document.getElementById('ocasiao').value
+            ocasiao: document.getElementById('ocasiao').value,
+            nota: document.getElementById('nota_favorita').value
         };
 
         try {
-            const resp = await fetch(`${API_URL}/selecao`, {
+            const resp = await fetch('https://app-perfumes-qf4c.onrender.com/selecao', {
                 method: 'POST',
                 headers: {'Content-Type': 'application/json'},
                 body: JSON.stringify(payload)
             });
             const r = await resp.json();
 
-            document.getElementById('fluxo-principal').style.display = 'none';
+            document.getElementById('formulario').style.display = 'none';
             document.getElementById('resultado').style.display = 'block';
             
             document.getElementById('res-identidade').innerText = r.identidade;
             document.getElementById('res-recomendacao').innerText = r.recomendacao;
-            document.getElementById('res-idade').innerText = r.idade_perfil;
+            document.getElementById('res-nota').innerText = payload.nota;
         } catch (e) {
-            alert("Erro ao conectar com a boutique. Tente novamente.");
-            btn.innerText = "REVELAR MINHA SELEÇÃO";
-        }
-    }
-
-    async function buscarManual() {
-        const termo = document.getElementById('termo_busca').value;
-        const resDiv = document.getElementById('res-manual');
-        resDiv.innerHTML = "Consultando acervo...";
-
-        try {
-            const resp = await fetch(`${API_URL}/buscar?termo=${termo}`);
-            const r = await resp.json();
-            resDiv.innerHTML = r.resultado;
-        } catch (e) {
-            resDiv.innerHTML = "Nota não localizada.";
+            alert("Erro ao gerar consultoria.");
         }
     }
 </script>

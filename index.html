@@ -163,16 +163,20 @@
 
             const r = await response.json();
 
-            if (r.status === "sucesso") {
-                resDiv.innerHTML = `
-                    <p>${r.mensagem}</p>
-                    <p><strong>Identidade:</strong> ${r.identidade}</p>
-                    <p><strong>Recomendação:</strong> ${r.recomendacao}</p>
-                    <p><em>${r.dica}</em></p>
-                    <button class="btn-nova-consulta" onclick="window.location.reload()">Fazer Nova Consulta</button>
-                `;
-                resDiv.style.display = 'block';
-            }
+          // Procure esta parte no seu index.html e substitua
+if (r.status === "sucesso") {
+    resDiv.innerHTML = 
+        <p>${r.mensagem}</p>
+        <p><strong>Identidade:</strong> ${r.identidade}</p>
+        <p><strong>Recomendação:</strong> ${r.recomendacao}</p>
+        <p><strong>Perfil Etário:</strong> ${r.idade_perfil}</p> 
+        <p><em>${r.dica}</em></p>
+        <br>
+        <button class="btn-nova-consulta" onclick="window.location.reload()">Fazer Nova Consulta</button>
+    ;
+    resDiv.style.display = 'block'
+    
+   }
         } catch (error) {
             alert("O servidor está processando. Tente novamente em alguns segundos.");
             formDiv.style.display = 'block';

@@ -15,7 +15,7 @@ def carregar_dados(nome_arquivo):
     return None
 
 def obter_signo(dia, mes):
-    # Removi acentos das chaves para bater com o seu JSON
+    # Padronizado sem acentos conforme seu novo JSON
     if (mes == 3 and dia >= 21) or (mes == 4 and dia <= 19): return "aries"
     if (mes == 4 and dia >= 20) or (mes == 5 and dia <= 20): return "touro"
     if (mes == 5 and dia >= 21) or (mes == 6 and dia <= 20): return "gemeos"
@@ -35,37 +35,26 @@ def gerar_selecao():
         dados = request.json
         cidade = dados.get('cidade', 'nao informada')
         ocasiao = dados.get('ocasiao', 'dia_a_dia').lower()
-        data_string = dados.get('data_nasc', '').strip()
+        data_str = dados.get('data_nasc', '').strip()
 
-        # --- LÓGICA DE DATA REFORÇADA ---
-        try:
-            # Tenta converter a data. Se o usuário digitar 84, vira 1984.
-            partes = data_string.split('/')
-            dia = int(partes[0])
-            mes = int(partes[1])
-            ano = int(partes[2])
-            
-            if ano < 100: # Se digitaram só "84"
-                ano += 1900 if ano > 25 else 2000
-            
-            hoje = datetime.now()
-            idade = hoje.year - ano
-            # Ajuste fino: se ainda não fez aniversário este ano, subtrai 1
-            if (hoje.month, hoje.day) < (mes, dia):
-                idade -= 1
-                
-            signo = obter_signo(dia, mes)
-        except Exception as e:
-            print(f"Erro na data: {e}")
-            idade = 0
-            signo = "peixes" # Fallback se der erro
-        # --------------------------------
+        # Cálculo robusto de idade e signo
+        partes = data_str.split('/')
+        dia, mes = int(partes[0]), int(partes[1])
+        ano = int(partes[2])
+        if ano < 100: ano += 1900 if ano > 25 else 2000
+        
+        hoje = datetime.now()
+        idade = hoje.year - ano
+        if (hoje.month, hoje.day) < (mes, dia): idade -= 1
+        
+        signo = obter_signo(dia, mes)
 
+        # Carregar bancos de dados
         db_signos = carregar_dados('Jjon_signo_perfume.JSON')
         db_ocasiao = carregar_dados('Jjon_ocasiao_perfume.JSON')
         dataset = carregar_dados('dataset_perfumes.json')
 
-        # Busca por Idade
+        # Busca perfume por idade
         perfume_idade = "Fragrancia de Prestigio"
         if dataset:
             for p in dataset:
@@ -80,17 +69,25 @@ def gerar_selecao():
 
         return jsonify({
             "status": "sucesso",
-            "mensagem": f"Seleção preparada para cliente em {cidade}.",
+            "mensagem": f"Selecao preparada para cliente em {cidade}.",
             "identidade": f"Sua assinatura baseada no signo de {signo.capitalize()} sugere {p_signo}.",
-            "recomendacao": f"Para {ocasiao.replace('_',' ')}, a nossa escolha principal é o {p_ocasiao}.",
-            "idade_perfil": f"Considerando o seu perfil de {idade} anos, o {perfume_idade} é a nossa recomendação especial.",
-            "dica": "Aplique nos pontos de pulsação para uma melhor performance da fragrância."
+            "recomendacao": f"Para {ocasiao.replace('_',' ')}, a nossa escolha principal e o {p_ocasiao}.",
+            "idade_perfil": f"Considerando o seu perfil de {idade} anos, o {perfume_idade} e a nossa recomendacao especial.",
+            "dica": "Aplique nos pontos de pulsacao para uma melhor performance da fragrancia."
         })
     except Exception as e:
         return jsonify({"status": "erro", "mensagem": str(e)})
-        
 
-        
+@app.route('/buscar', methods=['GET'])
+def buscar():
+    termo = request.args.get('termo', '').lower()
+    dataset = carregar_dados('dataset_perfumes.json')
+    if not dataset: return jsonify({"resultado": "Catalogo indisponivel."})
+    
+    for p in dataset:
+        if termo in p.get('Perfume', '').lower() or termo in p.get('Notas', '').lower():
+            return jsonify({"resultado": f"Destaque: {p['Perfume']} (Ideal para {p['Idade_Min']}-{p['Idade_Max']} anos)."})
+    return jsonify({"resultado": "Nenhuma fragrancia encontrada."})
 
 if __name__ == '__main__':
     port = int(os.environ.get("PORT", 5000))

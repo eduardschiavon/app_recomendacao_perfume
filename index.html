@@ -3,91 +3,219 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Boutique de Fragrâncias</title>
+    <title>Boutique Schiavon - Consultoria de Fragrâncias</title>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&family=Montserrat:wght@300;400;600&display=swap" rel="stylesheet">
     <style>
-        body { font-family: 'Georgia', serif; background-color: #fff; color: #333; margin: 0; padding: 20px; display: flex; justify-content: center; }
-        .container { max-width: 450px; width: 100%; padding: 30px; border: 1px solid #eee; }
-        h1 { text-align: center; font-weight: 300; letter-spacing: 2px; text-transform: uppercase; border-bottom: 1px solid #d4af37; padding-bottom: 10px; }
-        label { display: block; margin-top: 15px; font-size: 0.8rem; color: #888; text-transform: uppercase; }
-        input, select { width: 100%; padding: 12px; margin-top: 5px; border: 1px solid #ddd; box-sizing: border-box; }
-        button { width: 100%; padding: 15px; background: #1a1a1a; color: #fff; border: none; margin-top: 20px; cursor: pointer; text-transform: uppercase; }
-        #resultado, #busca-extra { margin-top: 30px; display: none; border-top: 1px solid #eee; padding-top: 20px; }
-        .uau-box { background: #f9f9f9; padding: 15px; border-left: 3px solid #d4af37; margin-top: 10px; font-size: 0.9rem; }
+        :root {
+            --ouro: #d4af37;
+            --preto: #1a1a1a;
+            --creme: #fafafa;
+        }
+
+        body { 
+            font-family: 'Montserrat', sans-serif; 
+            background-color: var(--creme); 
+            color: var(--preto); 
+            margin: 0; 
+            padding: 20px; 
+            display: flex; 
+            justify-content: center; 
+        }
+
+        .container { 
+            max-width: 480px; 
+            width: 100%; 
+            background: #fff;
+            padding: 40px 30px; 
+            border-radius: 4px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+            border-top: 5px solid var(--ouro);
+        }
+
+        .header { text-align: center; margin-bottom: 30px; }
+        .logo-placeholder { 
+            width: 80px; 
+            height: 80px; 
+            background: var(--preto); 
+            border-radius: 50%; 
+            margin: 0 auto 15px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border: 2px solid var(--ouro);
+        }
+
+        h1 { 
+            font-family: 'Cinzel', serif;
+            font-size: 1.4rem;
+            letter-spacing: 3px; 
+            text-transform: uppercase; 
+            margin: 0;
+            color: var(--preto);
+        }
+
+        .subtitle { font-size: 0.7rem; color: var(--ouro); letter-spacing: 2px; margin-top: 5px; }
+
+        label { display: block; margin-top: 20px; font-size: 0.75rem; font-weight: 600; text-transform: uppercase; color: #666; }
+        
+        input, select { 
+            width: 100%; 
+            padding: 12px 0; 
+            margin-top: 5px; 
+            border: none;
+            border-bottom: 1px solid #ddd;
+            font-family: inherit;
+            font-size: 1rem;
+            outline: none;
+            transition: border-color 0.3s;
+        }
+
+        input:focus { border-bottom-color: var(--ouro); }
+
+        button { 
+            width: 100%; 
+            padding: 18px; 
+            background: var(--preto); 
+            color: var(--ouro); 
+            border: 1px solid var(--ouro);
+            margin-top: 30px; 
+            cursor: pointer; 
+            font-family: 'Cinzel', serif;
+            font-weight: 700;
+            letter-spacing: 2px;
+            transition: all 0.3s;
+        }
+
+        button:hover { background: var(--ouro); color: var(--preto); }
+
+        #resultado, #secao-busca { display: none; margin-top: 40px; animation: fadeIn 0.6s ease; }
+
+        @keyframes fadeIn { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: translateY(0); } }
+
+        .card-consultoria {
+            background: var(--preto);
+            color: #fff;
+            padding: 25px;
+            border-radius: 2px;
+            position: relative;
+        }
+
+        .card-consultoria::after {
+            content: "";
+            position: absolute;
+            top: 10px; left: 10px; right: 10px; bottom: 10px;
+            border: 1px solid rgba(212, 175, 55, 0.3);
+            pointer-events: none;
+        }
+
+        .item-resultado { margin-bottom: 15px; }
+        .titulo-item { color: var(--ouro); font-size: 0.7rem; text-transform: uppercase; display: block; margin-bottom: 3px; }
+        
+        .busca-especifica { margin-top: 30px; padding-top: 20px; border-top: 1px solid #eee; }
     </style>
 </head>
 <body>
 
 <div class="container">
-    <h1>Consultoria</h1>
+    <div class="header">
+        <div class="logo-placeholder">
+            <span style="color: var(--ouro); font-family: 'Cinzel'; font-size: 1.5rem;">S</span>
+        </div>
+        <h1>Boutique Schiavon</h1>
+        <div class="subtitle">Consultoria de Assinatura</div>
+    </div>
     
-    <div id="form-perfil">
+    <div id="fluxo-principal">
         <label>Cidade</label>
-        <input type="text" id="cidade" placeholder="Sua cidade">
+        <input type="text" id="cidade" placeholder="Ex: Duque de Caxias">
+        
         <label>Data de Nascimento</label>
         <input type="text" id="data_nasc" placeholder="DD/MM/AAAA">
-        <label>Nota Favorita</label>
-        <input type="text" id="nota_fav" placeholder="Ex: Baunilha, Cafe">
-        <label>Ocasião</label>
+        
+        <label>Ocasião Desejada</label>
         <select id="ocasiao">
-            <option value="reuniao">Trabalho</option>
-            <option value="festa">Festa</option>
-            <option value="encontro_romantico">Encontro</option>
-            <option value="balada">Balada</option>
+            <option value="reuniao">Trabalho Profissional</option>
+            <option value="festa">Eventos e Festas</option>
+            <option value="encontro_romantico">Encontro Romântico</option>
+            <option value="balada">Noite e Balada</option>
+            <option value="atividades_fisicas">Esporte e Bem-estar</option>
         </select>
-        <button onclick="gerarPerfil()">Descobrir Minha Assinatura</button>
+        
+        <button onclick="gerarAnalise()">Revelar Minha Seleção</button>
     </div>
 
-    <div id="resultado"></div>
-
-    <div id="busca-extra">
-        <h2 style="font-size: 1rem; font-weight: 400;">Deseja explorar mais?</h2>
-        <p style="font-size: 0.8rem; color: #999;">Busque por uma marca, ingrediente ou estilo (ex: Floral, Cacau, Dior)</p>
-        <input type="text" id="termo_busca" placeholder="O que voce procura?">
-        <button onclick="buscarManual()" style="background: #d4af37;">Consultar Acervo</button>
-        <div id="res-manual" class="uau-box" style="display:none;"></div>
-        <button onclick="window.location.reload()" style="background:#eee; color:#666; font-size:0.7rem;">Nova Consultoria Completa</button>
+    <div id="resultado">
+        <div class="card-consultoria">
+            <div class="item-resultado">
+                <span class="titulo-item">Identidade Astral</span>
+                <div id="res-identidade"></div>
+            </div>
+            <div class="item-resultado">
+                <span class="titulo-item">Sugestão para Ocasião</span>
+                <div id="res-recomendacao"></div>
+            </div>
+            <div class="item-resultado">
+                <span class="titulo-item">Perfil Etário</span>
+                <div id="res-idade"></div>
+            </div>
+        </div>
+        
+        <div class="busca-especifica">
+            <label>Deseja consultar uma nota específica?</label>
+            <input type="text" id="termo_busca" placeholder="Ex: Jasmim, Cacau, Rosa...">
+            <button onclick="buscarManual()" style="margin-top:10px; padding: 12px;">Consultar Detalhes</button>
+            <div id="res-manual" style="margin-top:15px; font-size: 0.9rem; color: #444;"></div>
+        </div>
+        
+        <button onclick="window.location.reload()" style="background:none; color:#999; border:none; font-size:0.7rem; margin-top:20px;">Fazer Nova Consulta</button>
     </div>
 </div>
 
 <script>
-    const BASE_URL = 'https://app-perfumes-qf4c.onrender.com';
+    const API_URL = 'https://app-perfumes-qf4c.onrender.com'; // Mantenha sua URL do Render aqui
 
-    async function gerarPerfil() {
-        const dados = {
+    async function gerarAnalise() {
+        const btn = document.querySelector('button');
+        btn.innerText = "ANALISANDO...";
+        
+        const payload = {
             cidade: document.getElementById('cidade').value,
             data_nasc: document.getElementById('data_nasc').value,
             ocasiao: document.getElementById('ocasiao').value
         };
 
-        const resp = await fetch(`${BASE_URL}/selecao`, {
-            method: 'POST',
-            headers: {'Content-Type': 'application/json'},
-            body: JSON.stringify(dados)
-        });
-        const r = await resp.json();
+        try {
+            const resp = await fetch(`${API_URL}/selecao`, {
+                method: 'POST',
+                headers: {'Content-Type': 'application/json'},
+                body: JSON.stringify(payload)
+            });
+            const r = await resp.json();
 
-        if(r.status === 'sucesso') {
-            document.getElementById('form-perfil').style.display = 'none';
-            document.getElementById('resultado').innerHTML = `
-                <p><strong>${r.identidade}</strong></p>
-                <p>${r.recomendacao}</p>
-                <p><em>${r.idade_perfil}</em></p>
-                <p style="font-size:0.8rem; color:#d4af37;">${r.dica}</p>
-            `;
+            document.getElementById('fluxo-principal').style.display = 'none';
             document.getElementById('resultado').style.display = 'block';
-            document.getElementById('busca-extra').style.display = 'block';
+            
+            document.getElementById('res-identidade').innerText = r.identidade;
+            document.getElementById('res-recomendacao').innerText = r.recomendacao;
+            document.getElementById('res-idade').innerText = r.idade_perfil;
+        } catch (e) {
+            alert("Erro ao conectar com a boutique. Tente novamente.");
+            btn.innerText = "REVELAR MINHA SELEÇÃO";
         }
     }
 
     async function buscarManual() {
         const termo = document.getElementById('termo_busca').value;
-        const box = document.getElementById('res-manual');
-        box.style.display = 'block';
-        box.innerHTML = "Buscando detalhes...";
+        const resDiv = document.getElementById('res-manual');
+        resDiv.innerHTML = "Consultando acervo...";
 
-        const resp = await fetch(`${BASE_URL}/buscar?termo=${termo}`);
-        const r = await resp.json();
-        box.innerHTML = r.resultado;
+        try {
+            const resp = await fetch(`${API_URL}/buscar?termo=${termo}`);
+            const r = await resp.json();
+            resDiv.innerHTML = r.resultado;
+        } catch (e) {
+            resDiv.innerHTML = "Nota não localizada.";
+        }
     }
 </script>
 

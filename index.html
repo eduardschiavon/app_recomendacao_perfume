@@ -9,7 +9,7 @@
         :root {
             --ouro: #d4af37;
             --preto: #1a1a1a;
-            --creme: #f5f2e9; /* Fundo creme conforme a imagem */
+            --creme: #f5f2e9; 
         }
 
         body { 
@@ -29,126 +29,134 @@
             text-align: center;
         }
 
-        /* Topo: Logotipo Pantera */
         .logo-topo {
-            width: 120px;
+            width: 150px;
             height: auto;
             margin-bottom: 10px;
         }
 
         h1 { 
             font-family: 'Cinzel', serif;
-            font-size: 1.1rem;
+            font-size: 1rem;
             color: var(--ouro);
             letter-spacing: 1px;
             text-transform: uppercase;
             margin-bottom: 30px;
         }
 
-        /* Estilização dos Campos de Entrada */
         .form-group { text-align: left; margin-bottom: 15px; }
         
-        label { 
-            display: block; 
-            font-size: 0.85rem; 
-            color: #444; 
-            margin-bottom: 5px; 
-        }
+        label { display: block; font-size: 0.8rem; color: #666; margin-bottom: 5px; text-transform: uppercase; }
 
         input, select { 
             width: 100%; 
             padding: 12px; 
-            border: 1px solid #ccc;
-            border-radius: 5px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
             font-family: inherit;
             background: #fff;
             box-sizing: border-box;
         }
 
-        /* Botão Principal Dourado */
         .btn-revelar { 
             width: 100%; 
-            padding: 15px; 
+            padding: 18px; 
             background: var(--preto); 
             color: var(--ouro); 
-            border: none;
-            border-radius: 5px;
+            border: 1px solid var(--ouro);
+            border-radius: 4px;
             margin-top: 20px; 
             cursor: pointer; 
+            font-family: 'Cinzel', serif;
             font-weight: 700;
             text-transform: uppercase;
-            letter-spacing: 1px;
-            transition: 0.3s;
+            letter-spacing: 2px;
         }
 
-        .btn-revelar:hover { opacity: 0.9; }
-
-        /* Resultado em Cartão Premium */
+        /* ESTILO CARTÃO PREMIUM (O que você queria de volta) */
         #resultado { 
             display: none; 
-            margin-top: 40px; 
-            animation: fadeIn 0.8s ease forwards;
+            margin-top: 30px; 
+            animation: fadeIn 0.8s ease;
         }
 
-        @keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
+        .card-consultoria {
+            background: var(--preto);
+            color: #fff;
+            padding: 30px;
+            border-radius: 4px;
+            position: relative;
+            text-align: left;
+            border: 1px solid var(--ouro);
+        }
 
         .selo-presenca {
-            width: 100px;
-            margin-bottom: 15px;
+            width: 120px;
+            display: block;
+            margin: 0 auto 20px;
         }
 
         h2.assinatura-titulo {
             font-family: 'Cinzel', serif;
             color: var(--ouro);
-            font-size: 1.2rem;
-            margin-bottom: 20px;
+            font-size: 1.1rem;
+            text-align: center;
+            margin-bottom: 25px;
+            text-transform: uppercase;
         }
 
-        .card-conteudo {
-            text-align: left;
-            line-height: 1.6;
-            font-size: 0.95rem;
+        .item-res { margin-bottom: 15px; line-height: 1.5; }
+        .label-ouro { color: var(--ouro); font-weight: 600; text-transform: uppercase; font-size: 0.75rem; display: block; }
+
+        .dica-especial { 
+            font-size: 0.85rem; 
+            color: #bbb; 
+            font-style: italic; 
+            border-top: 1px solid #333; 
+            padding-top: 15px; 
+            margin-top: 15px; 
+            display: block;
         }
 
-        .label-resultado { font-weight: 700; }
-        
-        .dica-uso { font-style: italic; color: #555; margin-top: 20px; display: block; }
-
-        .btn-nova-consulta {
+        .btn-reset {
             background: none;
             border: none;
-            color: #888;
+            color: var(--ouro);
             text-decoration: underline;
-            margin-top: 30px;
+            margin-top: 25px;
             cursor: pointer;
             font-size: 0.8rem;
+            font-family: 'Cinzel', serif;
         }
+
+        @keyframes fadeIn { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: translateY(0); } }
     </style>
 </head>
 <body>
 
 <div class="container">
     <img src="flat.jpg" alt="Logo Boutique Schiavon" class="logo-topo">
-    <h1>Boutique Schiavon - Consultoria de Assinatura</h1>
+    <h1>Consultoria de Assinatura</h1>
     
     <div id="formulario">
         <div class="form-group">
             <label>Data de Nascimento</label>
-            <input type="text" id="data_nasc" placeholder="19/02/84">
+            <input type="text" id="data_nasc" placeholder="Ex: 19/02/1984">
         </div>
 
         <div class="form-group">
             <label>Nota Olfativa Favorita</label>
-            <input type="text" id="nota_favorita" placeholder="Baunilha">
+            <input type="text" id="nota_favorita" placeholder="Ex: Café, Baunilha...">
         </div>
         
         <div class="form-group">
             <label>Ocasião</label>
             <select id="ocasiao">
-                <option value="reuniao">Trabalho</option>
-                <option value="festa">Festa</option>
-                <option value="encontro_romantico">Encontro</option>
+                <option value="reuniao">Trabalho / Reunião</option>
+                <option value="festa">Festa / Evento</option>
+                <option value="encontro_romantico">Encontro Romântico</option>
                 <option value="balada">Balada</option>
+                <option value="atividades_fisicas">Atividades Físicas</option>
             </select>
         </div>
         
@@ -156,27 +164,44 @@
     </div>
 
     <div id="resultado">
-        <img src="Gemini_Generated_Image_jj1o7cjj1o7cjj1o.png" alt="Selo Presença" class="selo-presenca">
-        <h2 class="assinatura-titulo">Sua assinatura Presença</h2>
+        <div class="card-consultoria">
+            <img src="Gemini_Generated_Image_jj1o7cjj1o7cjj1o.png" alt="Selo Presença" class="selo-presenca">
+            <h2 class="assinatura-titulo">Sua assinatura Presença</h2>
 
-        <div class="card-conteudo">
-            <p><span class="label-resultado">Identidade:</span> <span id="res-identidade"></span></p>
-            <p><span class="label-resultado">Recomendação:</span> <span id="res-recomendacao"></span></p>
+            <div class="item-res">
+                <span class="label-ouro">Identidade Astral:</span>
+                <span id="res-identidade"></span>
+            </div>
+
+            <div class="item-res">
+                <span class="label-ouro">Recomendação Schiavon:</span>
+                <span id="res-recomendacao"></span>
+            </div>
+
+            <div class="item-res">
+                <span class="label-ouro">Perfil Etário:</span>
+                <span id="res-idade"></span>
+            </div>
             
-            <span class="dica-uso">Como você aprecia <span id="res-nota"></span>, recomendamos aplicar o perfume em pontos de pulsação.</span>
-            <span class="dica-uso">Aplique nos pontos de pulsação para uma melhor performance da fragrância.</span>
+            <span class="dica-especial">
+                Como você aprecia <strong id="res-nota-txt" style="color:var(--ouro);"></strong>, sugerimos aplicar a fragrância em pontos de pulsação para potencializar o rastro.
+            </span>
         </div>
         
-        <button class="btn-nova-consulta" onclick="window.location.reload()">Fazer Nova Consulta</button>
+        <button class="btn-reset" onclick="window.location.reload()">Fazer Nova Consulta</button>
     </div>
 </div>
 
 <script>
     async function gerarAnalise() {
+        const btn = document.querySelector('.btn-revelar');
+        const notaInput = document.getElementById('nota_favorita').value;
+        btn.innerText = "CONSULTANDO ACERVO...";
+        
         const payload = {
             data_nasc: document.getElementById('data_nasc').value,
             ocasiao: document.getElementById('ocasiao').value,
-            nota: document.getElementById('nota_favorita').value
+            cidade: "Duque de Caxias" // Valor padrão
         };
 
         try {
@@ -185,16 +210,23 @@
                 headers: {'Content-Type': 'application/json'},
                 body: JSON.stringify(payload)
             });
+            
             const r = await resp.json();
 
+            // CORREÇÃO DO ERRO UNDEFINED:
+            // Verificamos se o r.identidade existe, senão usamos r.mensagem ou um fallback
             document.getElementById('formulario').style.display = 'none';
             document.getElementById('resultado').style.display = 'block';
             
-            document.getElementById('res-identidade').innerText = r.identidade;
-            document.getElementById('res-recomendacao').innerText = r.recomendacao;
-            document.getElementById('res-nota').innerText = payload.nota;
+            document.getElementById('res-identidade').innerText = r.identidade || "Análise astral indisponível";
+            document.getElementById('res-recomendacao').innerText = r.recomendacao || "Fragrância sob consulta";
+            document.getElementById('res-idade').innerText = r.idade_perfil || "Perfil atemporal";
+            document.getElementById('res-nota-txt').innerText = notaInput || "notas nobres";
+
         } catch (e) {
-            alert("Erro ao gerar consultoria.");
+            console.error(e);
+            alert("Erro na conexão com o servidor. Verifique se o backend no Render está ativo.");
+            btn.innerText = "REVELAR MINHA SELEÇÃO";
         }
     }
 </script>

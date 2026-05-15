@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Boutique Schiavon - Guia de Cromoterapia Científica</title>
+    <style>
+        :root {
+            /* Paleta Premium Boutique Schiavon */
+            --dourado: #D4AF37;
+            --dourado-claro: #F3E5AB;
+            --bg-escuro: #1A1A1A;
+            --bg-card: #22252A;
+            --texto-claro: #E0E0E0;
+            --texto-suave: #A0A0A0;
+            
+            /* Cores da Cromoterapia sutilmente adaptadas ao fundo escuro */
+            --azul: #4299E1;
+            --indigo: #667EEA;
+            --violeta: #9F7AEA;
+            --rosa: #ED64A6;
+            --vermelho: #F56565;
+            --laranja: #ED8936;
+            --amarelo: #ECC94B;
+            --verde: #48BB78;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: 'Times New Roman', serif; /* Mantém o tom clássico da marca */
+        }
+
+        body {
+            background-color: var(--bg-escuro);
+            color: var(--texto-claro);
+            line-height: 1.7;
+            padding-bottom: 60px;
+        }
+
+        header {
+            background: linear-gradient(135deg, #111 0%, #222 100%);
+            text-align: center;
+            padding: 50px 20px;
+            border-bottom: 2px solid var(--dourado);
+        }
+
+        header h1 {
+            font-size: 2.2rem;
+            color: var(--dourado);
+            letter-spacing: 3px;
+            text-transform: uppercase;
+            margin-bottom: 15px;
+        }
+
+        header p {
+            font-size: 1.1rem;
+            color: var(--texto-suave);
+            max-width: 650px;
+            margin: 0 auto;
+            font-family: Arial, sans-serif;
+        }
+
+        /* Menu de Navegação Âncora */
+        .nav-container {
+            position: sticky;
+            top: 0;
+            background: #111;
+            padding: 20px 15px;
+            border-bottom: 1px solid #333;
+            z-index: 100;
+            overflow-x: auto;
+            white-space: nowrap;
+            text-align: center;
+        }
+
+        .nav-title {
+            font-family: Arial, sans-serif;
+            font-size: 0.85rem;
+            font-weight: bold;
+            margin-bottom: 12px;
+            color: var(--dourado-claro);
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+
+        .color-menu {
+            display: inline-flex;
+            gap: 12px;
+            padding: 0 10px;
+        }
+
+        .color-btn {
+            font-family: Arial, sans-serif;
+            padding: 8px 18px;
+            border: 1px solid var(--dourado);
+            border-radius: 4px;
+            color: white;
+            font-weight: 600;
+            cursor: pointer;
+            text-decoration: none;
+            font-size: 0.85rem;
+            transition: all 0.3s ease;
+            background: transparent;
+        }
+
+        .color-btn:hover {
+            background: var(--dourado);
+            color: var(--bg-escuro);
+            transform: translateY(-2px);
+        }
+
+        main {
+            max-width: 800px;
+            margin: 40px auto;
+            padding: 0 20px;
+        }
+
+        .intro-box {
+            background: var(--bg-card);
+            padding: 30px;
+            border-radius: 4px;
+            margin-bottom: 40px;
+            border-left: 4px solid var(--dourado);
+            font-family: Arial, sans-serif;
+            font-size: 0.95rem;
+        }
+
+        /* Seções de Cores */
+        .color-section {
+            background: var(--bg-card);
+            padding: 40px;
+            border-radius: 8px;
+            margin-bottom: 40px;
+            border: 1px solid #333;
+            scroll-margin-top: 140px;
+        }
+
+        .color-section h2 {
+            font-size: 1.8rem;
+            margin-bottom: 25px;
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            border-bottom: 1px solid #333;
+            padding-bottom: 10px;
+        }
+
+        .color-badge {
+            width: 20px;
+            height: 20px;
+            border-radius: 50%;
+            display: inline-block;
+            box-shadow: 0 0 10px rgba(255,255,255,0.2);
+        }
+
+        /* Customização dos Títulos com Identificação Cromática */
+        .section-azul h2 { color: var(--azul); }
+        .section-azul .color-badge { background-color: var(--azul); }
+        
+        .section-indigo h2 { color: var(--indigo); }
+        .section-indigo .color-badge { background-color: var(--indigo); }
+
+        .section-violeta h2 { color: var(--violeta); }
+        .section-violeta .color-badge { background-color: var(--violeta); }
+
+        .section-rosa h2 { color: var(--rosa); }
+        .section-rosa .color-badge { background-color: var(--rosa); }
+
+        .section-vermelho h2 { color: var(--vermelho); }
+        .section-vermelho .color-badge { background-color: var(--vermelho); }
+
+        .section-laranja h2 { color: var(--laranja); }
+        .section-laranja .color-badge { background-color: var(--laranja); }
+
+        .section-amarelo h2 { color: var(--amarelo); }
+        .section-amarelo .color-badge { background-color: var(--amarelo); }
+
+        .section-verde h2 { color: var(--verde); }
+        .section-verde .color-badge { background-color: var(--verde); }
+
+        p {
+            margin-bottom: 20px;
+            color: var(--texto-claro);
+            font-size: 1.1rem;
+        }
+
+        /* Tabelas Otimizadas em Modo Escuro */
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 25px 0;
+            font-family: Arial, sans-serif;
+            font-size: 0.9rem;
+        }
+
+        th, td {
+            border: 1px solid #383d46;
+            padding: 14px;
+            text-align: left;
+        }
+
+        th {
+            background-color: #1a1c20;
+            color: var(--dourado-claro);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        td {
+            background-color: #262a30;
+        }
+
+        ul {
+            margin-left: 25px;
+            margin-bottom: 25px;
+            font-family: Arial, sans-serif;
+            color: var(--texto-claro);
+        }
+
+        li {
+            margin-bottom: 8px;
+        }
+
+        /* Rodapé Nobre */
+        footer {
+            background: #0D0D0D;
+            color: var(--texto-suave);
+            padding: 50px 20px;
+            font-size: 0.85rem;
+            margin-top: 80px;
+            border-top: 1px solid #222;
+            font-family: Arial, sans-serif;
+        }
+
+        .footer-content {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .footer-content h3 {
+            color: var(--dourado);
+            margin-bottom: 15px;
+            font-family: 'Times New Roman', serif;
+            font-size: 1.3rem;
+        }
+
+        .footer-content a {
+            color: var(--dourado-claro);
+            text-decoration: none;
+        }
+
+        .footer-content a:hover {
+            text-decoration: underline;
+        }
+
+        .disclaimer {
+            border-top: 1px solid #222;
+            padding-top: 25px;
+            margin-top: 25px;
+            font-style: italic;
+            color: #888;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Boutique Schiavon</h1>
+        <p>Terapias Integrativas & Psicologia das Cores Aplicada ao Bem-Estar Estético e Emocional</p>
+    </header>
+
+    <div class="nav-container">
+        <div class="nav-title">Navegação por Frequências Cromáticas:</div>
+        <div class="color-menu">
+            <a href="#azul" class="color-btn">Azul</a>
+            <a href="#indigo" class="color-btn">Índigo</a>
+            <a href="#violeta" class="color-btn">Violeta</a>
+            <a href="#rosa" class="color-btn">Rosa</a>
+            <a href="#vermelho" class="color-btn">Vermelho</a>
+            <a href="#laranja" class="color-btn">Laranja</a>
+            <a href="#amarelo" class="color-btn">Amarelo</a>
+            <a href="#verde" class="color-btn">Verde</a>
+        </div>
+    </div>
+
+    <main>
+        <div class="intro-box">
+            Seja bem-vinda ao portal de bem-estar da <strong>Boutique Schiavon</strong>. O conteúdo aqui apresentado possui caráter estritamente informativo e educativo. Ressaltamos que o acompanhamento e o tratamento médico convencional são indispensáveis e nunca devem ser substituídos. As práticas holísticas e integrativas, como a cromoterapia, são consideradas terapias complementares de suporte ao bem-estar e à humanização ambiental. Elas são reconhecidas e regulamentadas internacionalmente pela <strong>Organização Mundial da Saúde (OMS)</strong> desde o início de seu programa oficial em 1976, operando de forma coadjuvante para promover o equilíbrio emocional, o relaxamento e a qualidade de vida.
+        </div>
+
+        <!-- AZUL -->
+        <section id="azul" class="color-section section-azul">
+            <h2><span class="color-badge"></span> Azul (Frequência Calmante)</h2>
+            <p>Atua na modulação do estresse psicológico e indução ao relaxamento, acalmando a mente hiperativa.</p>
+            <table>
+                <tr>
+                    <th>Indicação Principal</th>
+                    <th>Efeito Esperado</th>
+                    <th>Uso Prático</th>
+                </tr>
+                <tr>
+                    <td>Gerenciamento de Ansiedade</td>
+                    <td>Estímulo ao relaxamento psicofísico</td>
+                    <td>Luzes e ambientação clínica suave</td>
+                </tr>
+            </table>
+        </section>
+
+        <!-- ÍNDIGO -->
+        <section id="indigo" class="color-section section-indigo">
+            <h2><span class="color-badge"></span> Índigo (Clareza Cognitiva)</h2>
+            <p>Indicado para estabilização de pensamentos e repouso dos sentidos em ambientes sobrecarregados.</p>
+        </section>
+
+        <!-- VIOLETA -->
+        <section id="violeta" class="color-section section-violeta">
+            <h2><span class="color-badge"></span> Violeta (Introspecção)</h2>
+            <p>Favorece desaceleração neurológica, estados meditativos e acolhimento emocional íntimo.</p>
+        </section>
+
+        <!-- ROSA -->
+        <section id="rosa" class="color-section section-rosa">
+            <h2><span class="color-badge"></span> Rosa (Acolhimento e Suavidade)</h2>
+            <p>Promove segurança e conforto psicológico, desarmando comportamentos de alerta ou agitação.</p>
+        </section>
+
+        <!-- VERMELHO -->
+        <section id="vermelho" class="color-section section-vermelho">
+            <h2><span class="color-badge"></span> Vermelho (Vitalidade e Estímulo)</h2>
+            <p>Onda longa de alta estimulação, indicada para reabilitar foco e combater a letargia em quadros de apatia.</p>
+        </section>
+
+        <!-- LARANJA -->
+        <section id="laranja" class="color-section section-laranja">
+            <h2><span class="color-badge"></span> Laranja (Entusiasmo e Diálogo)</h2>
+            <p>Combina dinamismo e atividade cognitiva, incentivando a comunicação e a energia proativa.</p>
+        </section>
+
+        <!-- AMARELO -->
+        <section id="amarelo" class="color-section section-amarelo">
+            <h2><span class="color-badge"></span> Amarelo (Foco Intelectual)</h2>
+            <p>Ativa o sistema de atenção do cérebro, otimizando a retenção cognitiva em períodos de estudo.</p>
+        </section>
+
+        <!-- VERDE -->
+        <section id="verde" class="color-section section-verde">
+            <h2><span class="color-badge"></span> Verde (Equilíbrio e Regeneração)</h2>
+            <p>Frequência central do espectro visível. Garante repouso à retina e sensação de recuperação orgânica.</p>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <h3>Boutique Schiavon — Linha de Conteúdo Científico</h3>
+            <p>O reconhecimento global das Medicinas Tradicionais e Complementares segue as diretrizes da estratégia oficial da <a href="https://www.who.int" target="_blank">Organização Mundial da Saúde (OMS)</a>.</p>
+            <div class="disclaimer">
+                Aviso: Este site expressa conceitos puramente informativos de suporte de design biofílico e relaxamento integrativo. Consulte sempre seu médico para diagnósticos e tratamentos.
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>
